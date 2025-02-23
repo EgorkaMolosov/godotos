@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://j1v8kmx5aqgb"]
+
+[ext_resource type="Script" path="res://scenes/parallax_background.gd" id="1_vvpxa"]
+[ext_resource type="Texture2D" uid="uid://bk0emjb32w1du" path="res://background/BG Image.png" id="2_f01qt"]
+[ext_resource type="Texture2D" uid="uid://bdfayrr7y7hja" path="res://background/Big Clouds.png" id="3_rwvjp"]
+[ext_resource type="Texture2D" uid="uid://vvmvvuuqpyik" path="res://background/Small Cloud 2.png" id="4_ixd0r"]
+[ext_resource type="Texture2D" uid="uid://bf5aruhfh56io" path="res://background/Small Cloud 3.png" id="5_fa5tm"]
+[ext_resource type="Texture2D" uid="uid://bn7c4llwk7eyn" path="res://background/Water Reflect Big 04.png" id="6_nbt3w"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+layer = -99
+script = ExtResource("1_vvpxa")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1028, 0)
+
+[node name="BgImage" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(640, 360)
+scale = Vector2(3.33333, 5.625)
+texture = ExtResource("2_f01qt")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="BigClouds" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(640.083, 360)
+scale = Vector2(2.85751, 2.85148)
+texture = ExtResource("3_rwvjp")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(960, 0)
+
+[node name="SmallCloud2" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(336, 160)
+scale = Vector2(2.42567, 2.81786)
+texture = ExtResource("4_ixd0r")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(960, 0)
+
+[node name="SmallCloud3" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(792, 56)
+scale = Vector2(1.91636, 2.22115)
+texture = ExtResource("5_fa5tm")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1280, 0)
+
+[node name="WaterReflectBig04" type="Sprite2D" parent="ParallaxLayer5"]
+position = Vector2(613.861, 633.652)
+scale = Vector2(3.39885, 9.88988)
+skew = -0.356047
+texture = ExtResource("6_nbt3w")
