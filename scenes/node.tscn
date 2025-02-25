@@ -167,7 +167,5 @@ position = Vector2(1152, 416)
 position = Vector2(768, 272)
 
 [node name="Control" parent="." index="46" instance=ExtResource("11_vdjhg")]
-offset_left = 558.0
-offset_top = 8.0
-offset_right = 558.0
-offset_bottom = 8.0
+offset_left = 624.0
+offset_right = 624.0
