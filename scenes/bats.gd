@@ -3,7 +3,7 @@ extends AnimatableBody2D
 const SPEED = 99
 @onready var animated_bich = $AnimatedSprite2D
 
-# Called when the node enters the scene tree for the first time.
+# Called when the node enter"res://scenes/bats.gd"s the scene tree for the first time.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,7 +38,6 @@ func handle_movement_animation(direction):
 		
 
 func _on_button_pressed() -> void:
-	set_physics_process(false)
 	animated_bich.play("blow_jop")
 	# Replace with function body.
 

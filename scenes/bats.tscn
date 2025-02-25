@@ -66,7 +66,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"blow_jop",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -100,6 +100,7 @@ offset_left = -16.0
 offset_top = -8.0
 offset_right = 16.0
 offset_bottom = 8.0
+action_mode = 0
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
