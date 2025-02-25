@@ -13,3 +13,4 @@ func _process(delta: float) -> void:
 func _count_update():
 	score += 1
 	text = score
+	print(score)

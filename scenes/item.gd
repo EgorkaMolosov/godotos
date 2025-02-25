@@ -4,7 +4,7 @@ extends Area2D
 @onready var collision_shape = $CollisionShape2D
 @onready var collect_sound = $collect_sound
 @onready var Animated_sprite = $AnimatedSprite2D
-
+var score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,4 +21,8 @@ func on_pickup(body):
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	queue_free()
+	
+func _count_update():
+	score += 1
+	print(score)
 	
