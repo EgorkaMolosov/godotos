@@ -1,14 +1,16 @@
 extends Node
 @onready var player = $player
-@onready var count = $ontrol/Label
-
-func _ready() -> void:
-	pass # Replace with function body.
+@onready var count = $Control/Label
+var score = 0
+func _ready():
+	player._on_pickup_area_entered().connect(self._score_update())
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-func _on_mob_timer_timeout():
-	player._on_pickup_area_entered().connect(count._count_update().bind())
+func _score_update():
+	score += 1
+	count.text = str(score)
+	print(score)

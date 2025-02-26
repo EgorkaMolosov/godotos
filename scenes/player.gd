@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	handle_movement_animation(direction)
 
-func _on_pickup_area_entered(area: Area2D) -> void:
+func _on_pickup_area_entered(area: Area2D):
 	if area.has_method("on_pickup"):
 		area.on_pickup(self)
 	else:

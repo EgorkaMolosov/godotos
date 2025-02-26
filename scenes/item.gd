@@ -22,7 +22,5 @@ func on_pickup(body):
 func _on_animated_sprite_2d_animation_finished() -> void:
 	queue_free()
 	
-func _count_update():
-	score += 1
-	print(score)
+
 	
