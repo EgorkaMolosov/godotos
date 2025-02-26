@@ -193,7 +193,7 @@ animations = [{
 position = Vector2(1565, 554)
 script = ExtResource("1_xusnl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["ignored"]]
 shape = SubResource("CircleShape2D_guye2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -202,6 +202,8 @@ scale = Vector2(1.66862, 1.73112)
 sprite_frames = SubResource("SpriteFrames_bgflp")
 animation = &"disapaer"
 autoplay = "default"
+frame = 6
+frame_progress = 1.0
 
 [node name="collect_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_cexo0")

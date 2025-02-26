@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1eb7x7eqi65f"]
+[gd_scene load_steps=3 format=3 uid="uid://b1eb7x7eqi65f"]
 
 [ext_resource type="Script" path="res://scenes/gui_in_game.gd" id="1_h5v75"]
+[ext_resource type="FontFile" uid="uid://cpbwjmlx4yvbb" path="res://fonts/Bloq.ttf" id="2_neggv"]
 
 [node name="GUI_IN_GAME" type="CanvasLayer"]
 script = ExtResource("1_h5v75")
@@ -18,6 +19,18 @@ offset_top = 32.0
 offset_right = 1216.0
 offset_bottom = 128.0
 text = "ВЫЙТИ В МЕНЮ"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 600.0
+offset_top = 56.0
+offset_right = 685.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_neggv")
+theme_override_font_sizes/font_size = 25
+text = "счёт: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_retry_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_in_menu_pressed"]

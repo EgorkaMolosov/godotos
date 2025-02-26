@@ -7,7 +7,8 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 var SPEED = 300.0
 var JUMP_VELOCITY = -300.0
-@onready var apple = get_node('scenes/item.tscn') 
+var score = 0
+@onready var count = get_parent().get_node('GUI_IN_GAME/Label')
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -44,7 +45,16 @@ func _physics_process(delta: float) -> void:
 
 func _on_pickup_area_entered(area: Area2D):
 	if area.has_method("on_pickup"):
-		area.on_pickup(self)
+		if not area.is_in_group("ignored"):
+			#if count == 14:
+			#	
+			area.on_pickup(self)
+			score += 1
+			print(score)
+			count.set_text('счёт: '+str(score))
+			area.add_to_group("ignored")
+		else:
+			pass
 	else:
 		on_death()
 
@@ -70,6 +80,7 @@ func handle_movement_animation(direction):
 
 func on_death():
 	death_sound.play()
+	count.set_text('счёт: 0')
 	animated_sprite.play("death")
 	set_physics_process(false)
 
@@ -87,4 +98,7 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 
 func _on_pickup_area_body_entered(body: Node2D) -> void:
 	if body.has_method("_shit_process"):
-		on_death()# Replace with function body.
+		if position.y - body.position.y < -1:
+			body.queue_free()
+		else:
+			on_death()# Replace with function body.

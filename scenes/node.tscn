@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://8penk3w8kmgv"]
+[gd_scene load_steps=11 format=3 uid="uid://8penk3w8kmgv"]
 
 [ext_resource type="PackedScene" uid="uid://cdxtqw2bh5seq" path="res://scenes/node_2d.tscn" id="1_533lq"]
 [ext_resource type="Script" path="res://scenes/node.gd" id="2_ynew7"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://b1eb7x7eqi65f" path="res://scenes/gui_in_game.tscn" id="8_sl3xa"]
 [ext_resource type="PackedScene" uid="uid://bbgjdcdok07cq" path="res://scenes/bats.tscn" id="9_4xr33"]
 [ext_resource type="PackedScene" uid="uid://cp0iu1sqxyqkt" path="res://scenes/enemy.tscn" id="10_t18f7"]
-[ext_resource type="PackedScene" uid="uid://fpaxny7ukqxp" path="res://scenes/control.tscn" id="11_vdjhg"]
 
 [node name="World" instance=ExtResource("1_533lq")]
 script = ExtResource("2_ynew7")
@@ -166,6 +165,4 @@ position = Vector2(1152, 416)
 [node name="bats6" parent="." index="45" instance=ExtResource("9_4xr33")]
 position = Vector2(768, 272)
 
-[node name="Control" parent="." index="46" instance=ExtResource("11_vdjhg")]
-offset_left = 624.0
-offset_right = 624.0
+[editable path="player"]
