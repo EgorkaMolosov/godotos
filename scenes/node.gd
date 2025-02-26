@@ -3,12 +3,12 @@ extends Node
 @onready var count = $Control/Label
 var score = 0
 func _ready():
-	player._on_pickup_area_entered().connect(self._score_update())
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	player._on_pickup_area_entered().connect(self._score_update())
 
 func _score_update():
 	score += 1
