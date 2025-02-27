@@ -52,7 +52,7 @@ func _on_pickup_area_entered(area: Area2D):
 			count.set_text('счёт: '+str(score))
 			area.add_to_group("ignored")
 			if score == 14:
-				get_tree().change_scene_to_file()
+				get_tree().change_scene_to_file('res://scenes/molodec.tscn')
 		else:
 			pass
 	else:
