@@ -46,13 +46,13 @@ func _physics_process(delta: float) -> void:
 func _on_pickup_area_entered(area: Area2D):
 	if area.has_method("on_pickup"):
 		if not area.is_in_group("ignored"):
-			#if count == 14:
-			#	
 			area.on_pickup(self)
 			score += 1
 			print(score)
 			count.set_text('счёт: '+str(score))
 			area.add_to_group("ignored")
+			if score == 14:
+				get_tree().change_scene_to_file()
 		else:
 			pass
 	else:
