@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpqp8nx6swbsv"]
+[gd_scene load_steps=4 format=3 uid="uid://dpqp8nx6swbsv"]
 
 [ext_resource type="Script" path="res://scenes/menu.gd" id="1_0u8jq"]
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="2_vfncc"]
+[ext_resource type="FontFile" uid="uid://cpbwjmlx4yvbb" path="res://fonts/Bloq.ttf" id="3_n5rmg"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_0u8jq")
@@ -13,7 +14,9 @@ offset_left = 516.0
 offset_top = 269.0
 offset_right = 802.0
 offset_bottom = 441.0
-text = "\"Название игры\"
-нажмите, чтобы начать"
+theme_override_fonts/font = ExtResource("3_n5rmg")
+theme_override_font_sizes/font_size = 70
+text = "START"
+icon_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

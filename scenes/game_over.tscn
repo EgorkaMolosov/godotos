@@ -1,17 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpacifu0ic640"]
+[gd_scene load_steps=4 format=3 uid="uid://dpacifu0ic640"]
 
 [ext_resource type="Script" path="res://scenes/game_over.gd" id="1_w78g8"]
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="2_2v3b4"]
+[ext_resource type="FontFile" uid="uid://cpbwjmlx4yvbb" path="res://fonts/Bloq.ttf" id="2_fopce"]
 
 [node name="GameOver" type="CanvasLayer"]
 script = ExtResource("1_w78g8")
 
 [node name="Youdied" type="Button" parent="."]
-offset_left = 339.0
-offset_top = 310.0
-offset_right = 523.0
-offset_bottom = 377.0
-text = "ВЫЙТИ В МЕНЮ"
+offset_left = 336.0
+offset_top = 312.0
+offset_right = 520.0
+offset_bottom = 379.0
+theme_override_fonts/font = ExtResource("2_fopce")
+theme_override_font_sizes/font_size = 20
+text = "GO TO MENU"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
@@ -20,11 +23,13 @@ one_shot = true
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_2v3b4")]
 
 [node name="Button" type="Button" parent="."]
-offset_left = 724.0
-offset_top = 310.0
-offset_right = 909.0
-offset_bottom = 377.0
-text = "ВЫЙТИ ИЗ ИГРЫ"
+offset_left = 760.0
+offset_top = 312.0
+offset_right = 945.0
+offset_bottom = 379.0
+theme_override_fonts/font = ExtResource("2_fopce")
+theme_override_font_sizes/font_size = 20
+text = "LEAVE THE GAME"
 
 [connection signal="pressed" from="Youdied" to="." method="_on_youdied_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

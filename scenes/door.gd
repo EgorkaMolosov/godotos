@@ -3,21 +3,25 @@ extends Area2D
 @onready var collision_shape = $CollisionShape2D
 @onready var collect_sound = $collect_sound
 @onready var Animated_sprite = $AnimatedSprite2D
+var mass = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	self.add_to_group("ignored") # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if mass == true:
+		Animated_sprite.play('opened')
 
-func on_pickup(body):
-	Animated_sprite.play("disapaer")
-	collect_sound.play()
+func _open():
+	Animated_sprite.play('open')
+	self.remove_from_group("ignored")
+	
+ # Replace with function body.
+
 
 func _on_animated_sprite_2d_animation_finished() -> void:
-	queue_free()
-	self.remove_from_group("ignored")
- # Replace with function body.
+	if not self.is_in_group("ignored"):
+		mass = true# Replace with function body.

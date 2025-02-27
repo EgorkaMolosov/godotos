@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://qdj3o1jasumu"]
+[gd_scene load_steps=4 format=3 uid="uid://qdj3o1jasumu"]
 
 [ext_resource type="Script" path="res://scenes/level_choose.gd" id="1_n7efv"]
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="2_cl84t"]
+[ext_resource type="FontFile" uid="uid://cpbwjmlx4yvbb" path="res://fonts/Bloq.ttf" id="3_jkyhn"]
 
 [node name="Level_choose" type="Node2D"]
 script = ExtResource("1_n7efv")
@@ -13,6 +14,8 @@ offset_left = 288.0
 offset_top = 344.0
 offset_right = 505.0
 offset_bottom = 432.0
+theme_override_fonts/font = ExtResource("3_jkyhn")
+theme_override_font_sizes/font_size = 40
 text = "LEVEL 1"
 
 [node name="Button3" type="Button" parent="."]
@@ -20,13 +23,17 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 225.0
 offset_bottom = 96.0
-text = "	ВЫЙТИ ИЗ ИГРЫ"
+theme_override_fonts/font = ExtResource("3_jkyhn")
+theme_override_font_sizes/font_size = 29
+text = "	LEAVE THE GAME"
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 752.0
+offset_left = 776.0
 offset_top = 344.0
-offset_right = 969.0
+offset_right = 993.0
 offset_bottom = 432.0
+theme_override_fonts/font = ExtResource("3_jkyhn")
+theme_override_font_sizes/font_size = 40
 text = "LEVEL 2"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_first_pressed"]

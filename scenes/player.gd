@@ -9,6 +9,11 @@ var SPEED = 300.0
 var JUMP_VELOCITY = -300.0
 var score = 0
 @onready var count = get_parent().get_node('GUI_IN_GAME/Label')
+@onready var door = get_parent().get_node('door')
+
+func _process(delta: float) -> void:
+	if score == 13:
+		door._open()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -49,12 +54,13 @@ func _on_pickup_area_entered(area: Area2D):
 			area.on_pickup(self)
 			score += 1
 			print(score)
-			count.set_text('счёт: '+str(score))
+			count.set_text('score: '+str(score))
 			area.add_to_group("ignored")
-			if score == 14:
-				get_tree().change_scene_to_file('res://scenes/molodec.tscn')
 		else:
 			pass
+	elif area.has_method('_open'):
+		if not area.is_in_group("ignored"):
+			get_tree().change_scene_to_file('res://scenes/molodec.tscn')
 	else:
 		on_death()
 
@@ -80,7 +86,7 @@ func handle_movement_animation(direction):
 
 func on_death():
 	death_sound.play()
-	count.set_text('счёт: 0')
+	count.set_text('score: 0')
 	animated_sprite.play("death")
 	set_physics_process(false)
 

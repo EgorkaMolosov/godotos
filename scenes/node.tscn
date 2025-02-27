@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://8penk3w8kmgv"]
+[gd_scene load_steps=12 format=3 uid="uid://8penk3w8kmgv"]
 
 [ext_resource type="PackedScene" uid="uid://cdxtqw2bh5seq" path="res://scenes/node_2d.tscn" id="1_533lq"]
 [ext_resource type="Script" path="res://scenes/node.gd" id="2_ynew7"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b1eb7x7eqi65f" path="res://scenes/gui_in_game.tscn" id="8_sl3xa"]
 [ext_resource type="PackedScene" uid="uid://bbgjdcdok07cq" path="res://scenes/bats.tscn" id="9_4xr33"]
 [ext_resource type="PackedScene" uid="uid://cp0iu1sqxyqkt" path="res://scenes/enemy.tscn" id="10_t18f7"]
+[ext_resource type="PackedScene" uid="uid://bd6w0p5iloq7b" path="res://scenes/door.tscn" id="11_825b8"]
 
 [node name="World" instance=ExtResource("1_533lq")]
 script = ExtResource("2_ynew7")
@@ -19,6 +20,7 @@ position = Vector2(152, 80)
 rotation = 1.5708
 
 [node name="TileMap" parent="." index="1" instance=ExtResource("3_fpi7h")]
+visibility_layer = 2
 layer_0/tile_data = PackedInt32Array(589824, 3, 0, 589825, 196611, 0, 524291, 3, 7, 524292, 196611, 7, 589829, 393219, 7, 589830, 589827, 7, 524299, 393219, 0, 524300, 196611, 0, 589835, 393219, 3, 589836, 1966084, 6, 393231, 3, 0, 393232, 196611, 0, 458767, 1966084, 6, 458768, 196611, 3, 327684, 196611, 7, 327683, 3, 7, 393216, 196611, 7, 393225, 196611, 7, 393224, 3, 7, 262155, 393219, 7, 262156, 196611, 7, 262145, 3, 7, 262146, 589827, 7, 131080, 3, 7, 131081, 196611, 7, 131077, 196611, 7, 131076, 3, 7, 524288, 393219, 0, 524289, 589827, 0, 196624, 196611, 7, 196623, 393219, 7, 655368, 3, 0, 655369, 589827, 0, 720904, 3, 3, 655374, 1966084, 6, 655361, 1179652, 6, 655362, 1179652, 6, 655360, 1179652, 6, 655363, 131077, 0, 589842, 4, 0, 589843, 131077, 0, 655377, 1179652, 6, 655378, 1179652, 6, 655379, 1179652, 6, 655380, 131077, 0, 655376, 4, 0, 720912, 786436, 6, 786448, 1179652, 6, 720916, 786436, 6, 917520, 4, 0, 786447, 4, 0, 786449, 589827, 0, 917519, 4, 0, 851983, 786435, 6, 917518, 3, 0, 851978, 3, 7, 851979, 196611, 7, 917521, 131077, 0, 917523, 1966084, 6, 720899, 786436, 6, 786435, 786436, 6, 917508, 131077, 0, 917507, 131077, 0, 917506, 131077, 0, 917505, 131077, 0, 917504, 131077, 0, 851971, 786435, 6, 589847, 3, 0, 589848, 196611, 0, 655383, 3, 3, 655384, 196611, 3, 458778, 196611, 7, 458777, 3, 7, 393238, 393219, 7, 393239, 589827, 7, 327700, 196611, 7, 327699, 3, 7, 262168, 1966084, 6, 131093, 131077, 0, 131092, 4, 0, 196629, 196611, 3, 196628, 3, 3, 65561, 196611, 7, 65560, 3, 7, 851989, 3, 7, 851990, 3, 0, 851991, 196611, 0, 786455, 589827, 0, 786454, 393219, 0, 917526, 3, 3, 917527, 196611, 3, 786458, 3, 0, 851994, 3, 3, 917512, 589827, 0, 917511, 393219, 0, 65537, 393219, 7, 65538, 196611, 7, 720905, 589827, 3, 65535, 2, 0, 131071, 2, 0, 196607, 2, 0, 262143, 2, 0, 327679, 2, 0, 393215, 2, 0, 458751, 2, 0, 524287, 2, 0, 589823, 2, 0, 655359, 2, 0, 720895, 2, 0, 786431, 2, 0, 851967, 2, 0, 917503, 2, 0, 983039, 2, 0, 1048575, 2, 0, -1, 2, 0, -65537, 2, 0, -131073, 2, 0, -196609, 2, 0, -262145, 2, 0, -327681, 2, 0, -393217, 2, 0, -458753, 2, 0, 1114111, 2, 0, 1179647, 2, 0, 1245183, 2, 0, 1245211, 2, 0, 1179675, 2, 0, 1114139, 2, 0, 1048603, 2, 0, 983067, 2, 0, 917531, 2, 0, 851995, 2, 0, 786459, 2, 0, 720923, 2, 0, 655387, 2, 0, 589851, 2, 0, 524315, 2, 0, 458779, 2, 0, 393243, 2, 0, 327707, 2, 0, 262171, 2, 0, 196635, 2, 0, 131099, 2, 0, 65563, 2, 0, 27, 2, 0, -65509, 2, 0, -131045, 2, 0, -196581, 2, 0, -262117, 2, 0, -327653, 2, 0, -393189, 2, 0)
 
 [node name="player" parent="." index="2" instance=ExtResource("7_2akky")]
@@ -27,11 +29,11 @@ position = Vector2(592, 176)
 collision_layer = 7
 collision_mask = 7
 
-[node name="ParallaxBackground" parent="." index="3" instance=ExtResource("6_ad3cy")]
-layer = -2
-
-[node name="apple3" parent="." index="4" instance=ExtResource("5_d8rut")]
+[node name="apple3" parent="." index="3" instance=ExtResource("5_d8rut")]
 position = Vector2(4096, 1368)
+
+[node name="ParallaxBackground" parent="." index="4" instance=ExtResource("6_ad3cy")]
+layer = -2
 
 [node name="apple4" parent="." index="5" instance=ExtResource("5_d8rut")]
 position = Vector2(848, 560)
@@ -60,109 +62,109 @@ position = Vector2(432, 72)
 [node name="Item12" parent="." index="13" instance=ExtResource("5_d8rut")]
 position = Vector2(48, 360)
 
-[node name="Item13" parent="." index="14" instance=ExtResource("5_d8rut")]
-position = Vector2(32, 632)
-
-[node name="Item15" parent="." index="15" instance=ExtResource("5_d8rut")]
+[node name="Item15" parent="." index="14" instance=ExtResource("5_d8rut")]
 position = Vector2(528, 592)
 
-[node name="Item16" parent="." index="16" instance=ExtResource("5_d8rut")]
+[node name="Item16" parent="." index="15" instance=ExtResource("5_d8rut")]
 position = Vector2(1264, 552)
 
-[node name="Item17" parent="." index="17" instance=ExtResource("5_d8rut")]
+[node name="Item17" parent="." index="16" instance=ExtResource("5_d8rut")]
 position = Vector2(904, 384)
 
-[node name="Item18" parent="." index="18" instance=ExtResource("5_d8rut")]
+[node name="Item18" parent="." index="17" instance=ExtResource("5_d8rut")]
 position = Vector2(101, 34)
 
-[node name="spikes" parent="." index="19" instance=ExtResource("10_t18f7")]
+[node name="spikes" parent="." index="18" instance=ExtResource("10_t18f7")]
 position = Vector2(792, 464)
 
-[node name="spikes2" parent="." index="20" instance=ExtResource("10_t18f7")]
+[node name="spikes2" parent="." index="19" instance=ExtResource("10_t18f7")]
 position = Vector2(196, 390)
 
-[node name="spikes3" parent="." index="21" instance=ExtResource("10_t18f7")]
+[node name="spikes3" parent="." index="20" instance=ExtResource("10_t18f7")]
 position = Vector2(1136, 616)
 
-[node name="spikes4" parent="." index="22" instance=ExtResource("10_t18f7")]
+[node name="spikes4" parent="." index="21" instance=ExtResource("10_t18f7")]
 position = Vector2(988, 462)
 
-[node name="spikes5" parent="." index="23" instance=ExtResource("10_t18f7")]
+[node name="spikes5" parent="." index="22" instance=ExtResource("10_t18f7")]
 position = Vector2(728, 320)
 
-[node name="spikes6" parent="." index="24" instance=ExtResource("10_t18f7")]
+[node name="spikes6" parent="." index="23" instance=ExtResource("10_t18f7")]
 position = Vector2(248, 272)
 rotation = 1.5708
 
-[node name="spikes7" parent="." index="25" instance=ExtResource("10_t18f7")]
+[node name="spikes7" parent="." index="24" instance=ExtResource("10_t18f7")]
 position = Vector2(12, 294)
 
-[node name="spikes8" parent="." index="26" instance=ExtResource("10_t18f7")]
+[node name="spikes8" parent="." index="25" instance=ExtResource("10_t18f7")]
 position = Vector2(84, 654)
 
-[node name="spikes9" parent="." index="27" instance=ExtResource("10_t18f7")]
+[node name="spikes9" parent="." index="26" instance=ExtResource("10_t18f7")]
 position = Vector2(212, 102)
 
-[node name="spikes10" parent="." index="28" instance=ExtResource("10_t18f7")]
+[node name="spikes10" parent="." index="27" instance=ExtResource("10_t18f7")]
 position = Vector2(792, 392)
 rotation = 3.14159
 
-[node name="spikes11" parent="." index="29" instance=ExtResource("10_t18f7")]
+[node name="spikes11" parent="." index="28" instance=ExtResource("10_t18f7")]
 position = Vector2(56, 544)
 rotation = -3.14159
 
-[node name="spikes12" parent="." index="30" instance=ExtResource("10_t18f7")]
+[node name="spikes12" parent="." index="29" instance=ExtResource("10_t18f7")]
 position = Vector2(312, 464)
 rotation = 1.5708
 
-[node name="spikes13" parent="." index="31" instance=ExtResource("10_t18f7")]
+[node name="spikes13" parent="." index="30" instance=ExtResource("10_t18f7")]
 position = Vector2(832, 568)
 rotation = 1.5708
 
-[node name="spikes14" parent="." index="32" instance=ExtResource("10_t18f7")]
+[node name="spikes14" parent="." index="31" instance=ExtResource("10_t18f7")]
 position = Vector2(984, 592)
 rotation = 3.14159
 
-[node name="spikes15" parent="." index="33" instance=ExtResource("10_t18f7")]
+[node name="spikes15" parent="." index="32" instance=ExtResource("10_t18f7")]
 position = Vector2(552, 400)
 rotation = 4.71239
 
-[node name="spikes17" parent="." index="34" instance=ExtResource("10_t18f7")]
+[node name="spikes17" parent="." index="33" instance=ExtResource("10_t18f7")]
 position = Vector2(1136, 200)
 rotation = -1.5708
 
-[node name="spikes18" parent="." index="35" instance=ExtResource("10_t18f7")]
+[node name="spikes18" parent="." index="34" instance=ExtResource("10_t18f7")]
 position = Vector2(1104, 344)
 rotation = -3.14159
 
-[node name="spikes19" parent="." index="36" instance=ExtResource("10_t18f7")]
+[node name="spikes19" parent="." index="35" instance=ExtResource("10_t18f7")]
 position = Vector2(1168, 104)
 rotation = -3.14159
 
-[node name="spikes20" parent="." index="37" instance=ExtResource("10_t18f7")]
+[node name="spikes20" parent="." index="36" instance=ExtResource("10_t18f7")]
 position = Vector2(944, 104)
 rotation = -1.5708
 
-[node name="AudioStreamPlayer" parent="." index="38" instance=ExtResource("8_0w76l")]
+[node name="AudioStreamPlayer" parent="." index="37" instance=ExtResource("8_0w76l")]
 
-[node name="GUI_IN_GAME" parent="." index="39" instance=ExtResource("8_sl3xa")]
+[node name="GUI_IN_GAME" parent="." index="38" instance=ExtResource("8_sl3xa")]
 
-[node name="bats" parent="." index="40" instance=ExtResource("9_4xr33")]
+[node name="bats" parent="." index="39" instance=ExtResource("9_4xr33")]
 position = Vector2(432, 232)
 
-[node name="bats4" parent="." index="41" instance=ExtResource("9_4xr33")]
+[node name="bats4" parent="." index="40" instance=ExtResource("9_4xr33")]
 position = Vector2(32, 40)
 
-[node name="bats2" parent="." index="42" instance=ExtResource("9_4xr33")]
+[node name="bats2" parent="." index="41" instance=ExtResource("9_4xr33")]
 position = Vector2(1016, 72)
 
-[node name="bats3" parent="." index="43" instance=ExtResource("9_4xr33")]
+[node name="bats3" parent="." index="42" instance=ExtResource("9_4xr33")]
 position = Vector2(288, 432)
 
-[node name="bats5" parent="." index="44" instance=ExtResource("9_4xr33")]
+[node name="bats5" parent="." index="43" instance=ExtResource("9_4xr33")]
 position = Vector2(1152, 416)
 
-[node name="bats6" parent="." index="45" instance=ExtResource("9_4xr33")]
+[node name="bats6" parent="." index="44" instance=ExtResource("9_4xr33")]
 position = Vector2(768, 272)
+
+[node name="door" parent="." index="45" instance=ExtResource("11_825b8")]
+position = Vector2(29, 642)
 
 [editable path="player"]
