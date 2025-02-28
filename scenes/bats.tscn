@@ -89,18 +89,10 @@ script = ExtResource("1_wt7dd")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iorg2")
 animation = &"blow_jop"
+frame = 6
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_xj7i5")
 
-[node name="Button" type="Button" parent="."]
-light_mask = 512
-visibility_layer = 0
-offset_left = -16.0
-offset_top = -8.0
-offset_right = 16.0
-offset_bottom = 8.0
-action_mode = 0
-
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

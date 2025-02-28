@@ -2,6 +2,8 @@ extends AnimatableBody2D
 
 const SPEED = 99
 @onready var animated_bich = $AnimatedSprite2D
+var dead = false
+var already_dead = false
 
 # Called when the node enter"res://scenes/bats.gd"s the scene tree for the first time.
 
@@ -25,22 +27,14 @@ func _shit_process(delta: float) -> void:
 
 func toggle_flip_sprite(direction):
 	var player = get_parent().get_node("player")
-	if global_position > player.global_position:
-		animated_bich.play("default")
-		animated_bich.flip_h = true
-	else:
-		animated_bich.play("default")
-		animated_bich.flip_h = false
+	if already_dead == false:
+		if global_position > player.global_position:
+			animated_bich.play("default")
+			animated_bich.flip_h = true
+		else:
+			animated_bich.play("default")
+			animated_bich.flip_h = false
 
 func handle_movement_animation(direction):
 	animated_bich.play("default")
 	toggle_flip_sprite(direction)
-		
-
-func _on_button_pressed() -> void:
-	animated_bich.play("blow_jop")
-	# Replace with function body.
-
-func _on_animated_sprite_2d_animation_finished() -> void:
-	set_physics_process(false)
-	self.queue_free() # Replace with function body.
