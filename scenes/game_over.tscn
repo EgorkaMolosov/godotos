@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="2_2v3b4"]
 [ext_resource type="FontFile" uid="uid://cpbwjmlx4yvbb" path="res://fonts/Bloq.ttf" id="2_fopce"]
 
-[node name="GameOver" type="CanvasLayer"]
+[node name="GameOver" type="CanvasLayer" groups=["scenes"]]
 script = ExtResource("1_w78g8")
 
 [node name="Youdied" type="Button" parent="."]
