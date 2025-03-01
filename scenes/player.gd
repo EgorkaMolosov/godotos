@@ -10,8 +10,10 @@ var JUMP_VELOCITY = -300.0
 var score = 0
 @onready var count = get_parent().get_node('GUI_IN_GAME/Label')
 @onready var door = get_parent().get_node('door')
-@onready var global_info = get_tree().get_node('global_info').get_script()
-var level_file = get_tree().current_scene.name
+var level_file = null
+
+func _ready() -> void:
+	level_file = get_parent().scene_file_path
 
 func _process(delta: float) -> void:
 	if score == 13:
@@ -91,7 +93,7 @@ func on_death():
 	count.set_text('score: 0')
 	animated_sprite.play("death")
 	set_physics_process(false)
-	global_info.prev_level = level_file
+	GlobalInfo.prev_level = level_file
 
 func _animation_death_finished() -> void:
 	self.queue_free()

@@ -1,6 +1,4 @@
 extends CanvasLayer
-@onready var prev_level = get_tree().get_first_node_in_group("scenes")
-@onready var global_info = get_tree().get_node('global_info')
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -20,5 +18,4 @@ func _on_button_pressed() -> void:
 
 
 func _on_replay_pressed() -> void:
-	get_tree().change_scene_to_file(global_info.prev_level) # Replace with function body.
-	prev_level.remove_from_group("scenes")
+	get_tree().change_scene_to_file(GlobalInfo.prev_level) # Replace with function body.
