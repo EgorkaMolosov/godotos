@@ -57,7 +57,6 @@ func _on_pickup_area_entered(area: Area2D):
 		if not area.is_in_group("ignored"):
 			area.on_pickup(self)
 			score += 1
-			print(score)
 			count.set_text('score: '+str(score))
 			area.add_to_group("ignored")
 		else:
