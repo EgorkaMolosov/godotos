@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://qdj3o1jasumu"]
+[gd_scene load_steps=6 format=3 uid="uid://qdj3o1jasumu"]
 
 [ext_resource type="Script" path="res://scenes/level_choose.gd" id="1_n7efv"]
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="2_cl84t"]
 [ext_resource type="FontFile" uid="uid://cpbwjmlx4yvbb" path="res://fonts/Bloq.ttf" id="3_jkyhn"]
+[ext_resource type="PackedScene" uid="uid://b3vrt528eks6o" path="res://scenes/button_arrow.tscn" id="4_t6adh"]
+[ext_resource type="PackedScene" uid="uid://vjw6jk05tbsn" path="res://scenes/button_arrow_right.tscn" id="5_qo7hf"]
 
 [node name="Level_choose" type="Node2D"]
 script = ExtResource("1_n7efv")
@@ -17,6 +19,7 @@ offset_bottom = 96.0
 theme_override_fonts/font = ExtResource("3_jkyhn")
 theme_override_font_sizes/font_size = 29
 text = "	LEAVE THE GAME"
+metadata/_edit_use_anchors_ = true
 
 [node name="Button_first" type="Button" parent="."]
 offset_left = 296.0
@@ -54,8 +57,60 @@ theme_override_fonts/font = ExtResource("3_jkyhn")
 theme_override_font_sizes/font_size = 40
 text = "LEVEL 4"
 
+[node name="Button_fifth" type="Button" parent="."]
+offset_left = 1576.0
+offset_top = 200.0
+offset_right = 1793.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("3_jkyhn")
+theme_override_font_sizes/font_size = 40
+text = "LEVEL 5"
+
+[node name="Button_sixth" type="Button" parent="."]
+offset_left = 2048.0
+offset_top = 200.0
+offset_right = 2265.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("3_jkyhn")
+theme_override_font_sizes/font_size = 40
+text = "LEVEL 6"
+
+[node name="Button_seventh" type="Button" parent="."]
+offset_left = 1576.0
+offset_top = 416.0
+offset_right = 1793.0
+offset_bottom = 504.0
+theme_override_fonts/font = ExtResource("3_jkyhn")
+theme_override_font_sizes/font_size = 40
+text = "LEVEL 7"
+
+[node name="Button_eighth" type="Button" parent="."]
+offset_left = 2048.0
+offset_top = 416.0
+offset_right = 2265.0
+offset_bottom = 504.0
+theme_override_fonts/font = ExtResource("3_jkyhn")
+theme_override_font_sizes/font_size = 40
+text = "LEVEL 8"
+
+[node name="Button_arrow_left" parent="." instance=ExtResource("4_t6adh")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+position_smoothing_enabled = true
+
+[node name="Button" parent="." instance=ExtResource("5_qo7hf")]
+offset_left = 1312.0
+offset_right = 1392.0
+
 [connection signal="pressed" from="Button_Leave" to="." method="_on_button_leave_pressed"]
 [connection signal="pressed" from="Button_first" to="." method="_on_button_first_pressed"]
 [connection signal="pressed" from="Button_second" to="." method="_on_button_second_pressed"]
 [connection signal="pressed" from="Button_third" to="." method="_on_button_third_pressed"]
 [connection signal="pressed" from="Button_fourth" to="." method="_on_button_fourth_pressed"]
+[connection signal="pressed" from="Button_fifth" to="." method="_on_button_second_pressed"]
+[connection signal="pressed" from="Button_sixth" to="." method="_on_button_second_pressed"]
+[connection signal="pressed" from="Button_seventh" to="." method="_on_button_second_pressed"]
+[connection signal="pressed" from="Button_eighth" to="." method="_on_button_second_pressed"]
+[connection signal="pressed" from="Button_arrow_left" to="." method="_on_button_arrow_left__pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_right_pressed"]

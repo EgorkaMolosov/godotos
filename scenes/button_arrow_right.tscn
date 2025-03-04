@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://vjw6jk05tbsn"]
+
+[ext_resource type="Texture2D" uid="uid://da12sk5em1y7e" path="res://ui/16/Double-Chevron-Arrow-Right.png" id="1_e0e5j"]
+
+[node name="Button" type="Button"]
+offset_left = 1168.0
+offset_top = 312.0
+offset_right = 1248.0
+offset_bottom = 392.0
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(40, 40)
+scale = Vector2(5.64286, 5.64286)
+texture = ExtResource("1_e0e5j")
+flip_h = true

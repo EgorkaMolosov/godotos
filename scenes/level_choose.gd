@@ -1,4 +1,5 @@
 extends Node2D
+@onready var camera = $Camera2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,6 +13,13 @@ func _process(delta: float) -> void:
 
 func _on_button_leave_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_button_arrow_left__pressed() -> void:
+	camera.position.x += 1280 # Replace with function body.
+
+func _on_button_right_pressed() -> void:
+	camera.position.x += -1280 # Replace with function body.
 
 
 func _on_button_first_pressed() -> void:
