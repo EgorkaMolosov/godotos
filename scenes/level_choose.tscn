@@ -94,23 +94,25 @@ theme_override_font_sizes/font_size = 40
 text = "LEVEL 8"
 
 [node name="Button_arrow_left" parent="." instance=ExtResource("4_t6adh")]
+focus_mode = 0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(640, 360)
 position_smoothing_enabled = true
 
-[node name="Button" parent="." instance=ExtResource("5_qo7hf")]
+[node name="Button_arrow_right" parent="." instance=ExtResource("5_qo7hf")]
 offset_left = 1312.0
 offset_right = 1392.0
+focus_mode = 0
 
 [connection signal="pressed" from="Button_Leave" to="." method="_on_button_leave_pressed"]
 [connection signal="pressed" from="Button_first" to="." method="_on_button_first_pressed"]
 [connection signal="pressed" from="Button_second" to="." method="_on_button_second_pressed"]
 [connection signal="pressed" from="Button_third" to="." method="_on_button_third_pressed"]
 [connection signal="pressed" from="Button_fourth" to="." method="_on_button_fourth_pressed"]
-[connection signal="pressed" from="Button_fifth" to="." method="_on_button_second_pressed"]
+[connection signal="pressed" from="Button_fifth" to="." method="_on_button_fifth_pressed"]
 [connection signal="pressed" from="Button_sixth" to="." method="_on_button_second_pressed"]
 [connection signal="pressed" from="Button_seventh" to="." method="_on_button_second_pressed"]
 [connection signal="pressed" from="Button_eighth" to="." method="_on_button_second_pressed"]
 [connection signal="pressed" from="Button_arrow_left" to="." method="_on_button_arrow_left__pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_right_pressed"]
+[connection signal="pressed" from="Button_arrow_right" to="." method="_on_button_right_pressed"]

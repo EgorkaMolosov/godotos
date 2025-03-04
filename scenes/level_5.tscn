@@ -1,0 +1,144 @@
+[gd_scene load_steps=9 format=3 uid="uid://cpar65rhq588n"]
+
+[ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="1_l56cy"]
+[ext_resource type="PackedScene" uid="uid://cl6xvn3n8fv36" path="res://scenes/tile_map.tscn" id="2_ro0io"]
+[ext_resource type="PackedScene" uid="uid://cp0iu1sqxyqkt" path="res://scenes/enemy.tscn" id="3_7avch"]
+[ext_resource type="PackedScene" uid="uid://d0n3s3s3f6by4" path="res://scenes/player.tscn" id="4_pxfhd"]
+[ext_resource type="PackedScene" uid="uid://boj5trnp52f1m" path="res://scenes/music_level.tscn" id="5_iwhxh"]
+[ext_resource type="PackedScene" uid="uid://bd6w0p5iloq7b" path="res://scenes/door.tscn" id="6_huh7e"]
+[ext_resource type="PackedScene" uid="uid://bkehst4np6jr0" path="res://scenes/item.tscn" id="7_qy50j"]
+[ext_resource type="PackedScene" uid="uid://b1eb7x7eqi65f" path="res://scenes/gui_in_game.tscn" id="8_pd23o"]
+
+[node name="level_5" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_l56cy")]
+
+[node name="TileMap" parent="." instance=ExtResource("2_ro0io")]
+layer_0/tile_data = PackedInt32Array(589824, 786435, 6, 393216, 786435, 6, 393225, 786435, 6, 393224, 3, 0, 131080, 1966084, 6, 524288, 786435, 6, 655360, 786435, 6, 655376, 1966084, 6, 917520, 786435, 6, 851978, 1966084, 6, 917523, 786435, 6, 917508, 786435, 6, 917505, 786435, 6, 917504, 786435, 6, 458778, 786435, 6, 458777, 393219, 3, 327699, 1966084, 6, 851990, 1966084, 6, 917526, 786435, 6, 786458, 786435, 6, 851994, 786435, 6, 917511, 786435, 6, 458761, 786435, 6, 458760, 1966084, 6, 917530, 786435, 6, 720922, 786435, 6, 655386, 786435, 6, 589850, 786435, 6, 524314, 786435, 6, 393242, 786435, 6, 327706, 786435, 6, 262170, 786435, 6, 196634, 786435, 6, 131098, 786435, 6, 65562, 786435, 6, 26, 786435, 6, 0, 786435, 6, 65536, 786435, 6, 131072, 786435, 6, 196608, 786435, 6, 262144, 786435, 6, 327680, 786435, 6, 458752, 786435, 6, 720896, 786435, 6, 786432, 786435, 6, 851968, 786435, 6, -65536, 1179652, 6, -65535, 1179652, 6, -65534, 1179652, 6, -65533, 1179652, 6, -65532, 1179652, 6, -65531, 1179652, 6, -65530, 1179652, 6, -65529, 1179652, 6, -65528, 1179652, 6, -65527, 1179652, 6, -65526, 1179652, 6, -65525, 1179652, 6, -65524, 1179652, 6, -65523, 1179652, 6, -65522, 1179652, 6, -65521, 1179652, 6, -65520, 1179652, 6, -65519, 1179652, 6, -65518, 1179652, 6, -65517, 1179652, 6, -65516, 1179652, 6, -65515, 1179652, 6, -65514, 1179652, 6, -65513, 1179652, 6, -65512, 1179652, 6, -65511, 1179652, 6, -65510, 1179652, 6, 917514, 786435, 6, 917517, 786435, 6, 917529, 786435, 6, 851969, 786436, 6, 851972, 1966084, 6, 851975, 1966084, 6, 851981, 1966084, 6, 851984, 1966084, 6, 851987, 1966084, 6, 851993, 786436, 6, 327693, 1966084, 6, 262148, 1966084, 6, 589827, 1966084, 6, 65553, 1966084, 6, 196632, 1966084, 6, 589846, 1966084, 6, 524297, 1966084, 6, 327689, 1966084, 6, 393241, 393219, 0, 327703, 589827, 7, 327702, 393219, 7, 786433, 1966084, 6, 786457, 1966084, 6)
+
+[node name="spikes" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(216, 608)
+
+[node name="spikes2" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(504, 608)
+
+[node name="spikes3" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(1160, 128)
+
+[node name="spikes4" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(840, 112)
+rotation = 3.14159
+
+[node name="spikes5" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(400, 80)
+
+[node name="spikes6" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(200, 176)
+
+[node name="spikes7" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(176, 416)
+
+[node name="spikes8" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(448, 224)
+
+[node name="spikes9" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(1096, 416)
+
+[node name="spikes10" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(792, 464)
+
+[node name="spikes11" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(408, 280)
+
+[node name="spikes12" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(936, 224)
+
+[node name="spikes13" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(648, 224)
+
+[node name="spikes14" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(792, 608)
+
+[node name="spikes15" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(1080, 608)
+
+[node name="spikes16" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(128, 456)
+rotation = 4.71239
+
+[node name="spikes17" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(368, 120)
+rotation = 4.71239
+
+[node name="spikes18" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(456, 448)
+rotation = 3.14159
+
+[node name="spikes19" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(1224, 304)
+rotation = 4.71239
+
+[node name="spikes20" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(1128, 272)
+rotation = 1.5708
+
+[node name="spikes21" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(496, 248)
+rotation = 1.5708
+
+[node name="spikes22" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(1216, 152)
+rotation = 1.5708
+
+[node name="spikes23" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(896, 272)
+rotation = 4.71239
+
+[node name="player" parent="." instance=ExtResource("4_pxfhd")]
+position = Vector2(648, 584)
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("5_iwhxh")]
+
+[node name="door" parent="." instance=ExtResource("6_huh7e")]
+position = Vector2(933, 594)
+
+[node name="Item2" parent="." instance=ExtResource("7_qy50j")]
+position = Vector2(1232, 264)
+
+[node name="Item3" parent="." instance=ExtResource("7_qy50j")]
+position = Vector2(408, 256)
+
+[node name="Item4" parent="." instance=ExtResource("7_qy50j")]
+position = Vector2(1072, 352)
+
+[node name="Item5" parent="." instance=ExtResource("7_qy50j")]
+position = Vector2(792, 440)
+
+[node name="Item6" parent="." instance=ExtResource("7_qy50j")]
+position = Vector2(840, 168)
+
+[node name="Item7" parent="." instance=ExtResource("7_qy50j")]
+position = Vector2(424, 64)
+
+[node name="Item8" parent="." instance=ExtResource("7_qy50j")]
+position = Vector2(80, 480)
+
+[node name="Item9" parent="." instance=ExtResource("7_qy50j")]
+position = Vector2(1216, 464)
+
+[node name="Item10" parent="." instance=ExtResource("7_qy50j")]
+position = Vector2(552, 176)
+
+[node name="Item11" parent="." instance=ExtResource("7_qy50j")]
+position = Vector2(232, 160)
+
+[node name="Item12" parent="." instance=ExtResource("7_qy50j")]
+position = Vector2(360, 592)
+
+[node name="Item13" parent="." instance=ExtResource("7_qy50j")]
+position = Vector2(1200, 112)
+
+[node name="GUI_IN_GAME" parent="." instance=ExtResource("8_pd23o")]
+
+[node name="Item14" parent="." instance=ExtResource("7_qy50j")]
+position = Vector2(216, 384)

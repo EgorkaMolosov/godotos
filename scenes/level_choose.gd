@@ -33,3 +33,6 @@ func _on_button_third_pressed() -> void:
 
 func _on_button_fourth_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/level_4.tscn") # Replace with function body.
+
+func _on_button_fifth_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/level_5.tscn") # Replace with function body.
