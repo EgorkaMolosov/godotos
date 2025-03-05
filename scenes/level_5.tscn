@@ -26,9 +26,6 @@ position = Vector2(1160, 128)
 position = Vector2(840, 112)
 rotation = 3.14159
 
-[node name="spikes5" parent="." instance=ExtResource("3_7avch")]
-position = Vector2(400, 80)
-
 [node name="spikes6" parent="." instance=ExtResource("3_7avch")]
 position = Vector2(200, 176)
 
@@ -108,7 +105,7 @@ position = Vector2(800, 432)
 position = Vector2(840, 168)
 
 [node name="Item7" parent="." instance=ExtResource("7_qy50j")]
-position = Vector2(424, 64)
+position = Vector2(408, 64)
 
 [node name="Item8" parent="." instance=ExtResource("7_qy50j")]
 position = Vector2(80, 480)
