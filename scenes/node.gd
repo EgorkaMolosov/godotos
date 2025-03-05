@@ -1,7 +1,4 @@
 extends Node
-@onready var player = $player
-@onready var count = $Control/Label
-var score = 0
 
 func _ready():
 	pass

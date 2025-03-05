@@ -9,8 +9,6 @@
 [node name="Level_choose" type="Node2D"]
 script = ExtResource("1_n7efv")
 
-[node name="ParallaxBackground" parent="." instance=ExtResource("2_cl84t")]
-
 [node name="Button_Leave" type="Button" parent="."]
 offset_left = 8.0
 offset_top = 8.0
@@ -95,6 +93,8 @@ text = "LEVEL 8"
 
 [node name="Button_arrow_left" parent="." instance=ExtResource("4_t6adh")]
 focus_mode = 0
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_cl84t")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(640, 360)

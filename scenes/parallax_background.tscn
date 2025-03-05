@@ -30,7 +30,7 @@ scale = Vector2(2.85751, 2.85148)
 texture = ExtResource("3_rwvjp")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(800, 0)
 
 [node name="SmallCloud2" type="Sprite2D" parent="ParallaxLayer3"]
 position = Vector2(336, 160)
@@ -38,7 +38,7 @@ scale = Vector2(2.42567, 2.81786)
 texture = ExtResource("4_ixd0r")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(960, 0)
+motion_mirroring = Vector2(920, 0)
 
 [node name="SmallCloud3" type="Sprite2D" parent="ParallaxLayer4"]
 position = Vector2(792, 56)

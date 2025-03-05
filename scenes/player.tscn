@@ -329,11 +329,11 @@ animation = &"idle"
 
 [node name="jump_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_5l7mw")
-volume_db = -9.733
+volume_db = -30.533
 
 [node name="death_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_pn7ac")
-volume_db = 0.505
+volume_db = -9.895
 pitch_scale = 1.09
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
