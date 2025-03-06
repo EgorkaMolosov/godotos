@@ -10,12 +10,13 @@ var JUMP_VELOCITY = -300.0
 var score = 0
 @onready var count = get_parent().get_node('GUI_IN_GAME/Label')
 @onready var door = get_parent().get_node('door')
-@onready var parallax = GlobalInfo.parallax
+@onready var parallax = get_parent().get_node('ParallaxBackground')
 var level_file = null
 
 func _ready() -> void:
 	level_file = get_parent().scene_file_path
-
+	parallax.set_scroll_offset(GlobalInfo.parallax)
+	
 func _process(delta: float) -> void:
 	if score == 13:
 		door._open()
@@ -94,10 +95,10 @@ func on_death():
 	animated_sprite.play("death")
 	set_physics_process(false)
 	GlobalInfo.prev_level = level_file
-	GlobalInfo.parallax = get_parent().get_node('ParallaxBackground')
 
 func _animation_death_finished() -> void:
 	self.queue_free()
+	GlobalInfo.parallax = parallax.get_scroll_offset()
 	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
 
