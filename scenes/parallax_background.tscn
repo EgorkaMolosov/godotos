@@ -30,7 +30,7 @@ scale = Vector2(2.85751, 2.85148)
 texture = ExtResource("3_rwvjp")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(800, 0)
+motion_mirroring = Vector2(1100, 0)
 
 [node name="SmallCloud2" type="Sprite2D" parent="ParallaxLayer3"]
 position = Vector2(336, 160)

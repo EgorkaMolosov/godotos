@@ -10,6 +10,7 @@ var JUMP_VELOCITY = -300.0
 var score = 0
 @onready var count = get_parent().get_node('GUI_IN_GAME/Label')
 @onready var door = get_parent().get_node('door')
+@onready var parallax = GlobalInfo.parallax
 var level_file = null
 
 func _ready() -> void:
@@ -93,6 +94,7 @@ func on_death():
 	animated_sprite.play("death")
 	set_physics_process(false)
 	GlobalInfo.prev_level = level_file
+	GlobalInfo.parallax = get_parent().get_node('ParallaxBackground')
 
 func _animation_death_finished() -> void:
 	self.queue_free()
