@@ -10,18 +10,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	gui.position = gui.position.lerp(Vector2(new_pos, gui.position.y), delta * 10)
 
 func _on_button_leave_pressed() -> void:
 	get_tree().quit()
 
 
 func _on_button_arrow_left__pressed() -> void:
-	gui.position.x = lerp(gui.position.x, gui.position.x - 1280, 0.02)  # Replace with function body.
+	new_pos = gui.position.x - 1280
 
 func _on_button_right_pressed() -> void:
-	gui.position.x = lerp(gui.position.x, gui.position.x + 1280, 0.02) # Replace with function body.
-
+	new_pos = gui.position.x + 1280
 
 func _on_button_first_pressed() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()

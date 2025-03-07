@@ -16,11 +16,15 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Button_arrow_right" parent="gui" instance=ExtResource("5_qo7hf")]
-offset_left = 1312.0
-offset_right = 1392.0
+layout_mode = 0
+offset_left = 1304.0
+offset_top = 320.0
+offset_right = 1384.0
+offset_bottom = 400.0
 focus_mode = 0
 
 [node name="Button_Leave" type="Button" parent="gui"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 225.0
@@ -31,6 +35,7 @@ text = "	LEAVE THE GAME"
 metadata/_edit_use_anchors_ = true
 
 [node name="Button_first" type="Button" parent="gui"]
+layout_mode = 0
 offset_left = 296.0
 offset_top = 200.0
 offset_right = 513.0
@@ -40,6 +45,7 @@ theme_override_font_sizes/font_size = 40
 text = "LEVEL 1"
 
 [node name="Button_second" type="Button" parent="gui"]
+layout_mode = 0
 offset_left = 768.0
 offset_top = 200.0
 offset_right = 985.0
@@ -49,6 +55,7 @@ theme_override_font_sizes/font_size = 40
 text = "LEVEL 2"
 
 [node name="Button_third" type="Button" parent="gui"]
+layout_mode = 0
 offset_left = 296.0
 offset_top = 416.0
 offset_right = 513.0
@@ -58,6 +65,7 @@ theme_override_font_sizes/font_size = 40
 text = "LEVEL 3"
 
 [node name="Button_fourth" type="Button" parent="gui"]
+layout_mode = 0
 offset_left = 768.0
 offset_top = 416.0
 offset_right = 985.0
@@ -67,6 +75,7 @@ theme_override_font_sizes/font_size = 40
 text = "LEVEL 4"
 
 [node name="Button_fifth" type="Button" parent="gui"]
+layout_mode = 0
 offset_left = 1576.0
 offset_top = 200.0
 offset_right = 1793.0
@@ -76,6 +85,7 @@ theme_override_font_sizes/font_size = 40
 text = "LEVEL 5"
 
 [node name="Button_sixth" type="Button" parent="gui"]
+layout_mode = 0
 offset_left = 2048.0
 offset_top = 200.0
 offset_right = 2265.0
@@ -85,6 +95,7 @@ theme_override_font_sizes/font_size = 40
 text = "LEVEL 6"
 
 [node name="Button_seventh" type="Button" parent="gui"]
+layout_mode = 0
 offset_left = 1576.0
 offset_top = 416.0
 offset_right = 1793.0
@@ -94,6 +105,7 @@ theme_override_font_sizes/font_size = 40
 text = "LEVEL 7"
 
 [node name="Button_eighth" type="Button" parent="gui"]
+layout_mode = 0
 offset_left = 2048.0
 offset_top = 416.0
 offset_right = 2265.0
@@ -103,6 +115,11 @@ theme_override_font_sizes/font_size = 40
 text = "LEVEL 8"
 
 [node name="Button_arrow_left" parent="gui" instance=ExtResource("4_t6adh")]
+layout_mode = 0
+offset_left = 1176.0
+offset_top = 320.0
+offset_right = 1256.0
+offset_bottom = 400.0
 focus_mode = 0
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_cl84t")]
