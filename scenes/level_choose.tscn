@@ -131,7 +131,7 @@ focus_mode = 0
 [connection signal="pressed" from="gui/Button_third" to="." method="_on_button_third_pressed"]
 [connection signal="pressed" from="gui/Button_fourth" to="." method="_on_button_fourth_pressed"]
 [connection signal="pressed" from="gui/Button_fifth" to="." method="_on_button_fifth_pressed"]
-[connection signal="pressed" from="gui/Button_sixth" to="." method="_on_button_second_pressed"]
+[connection signal="pressed" from="gui/Button_sixth" to="." method="_on_button_sixth_pressed"]
 [connection signal="pressed" from="gui/Button_seventh" to="." method="_on_button_second_pressed"]
 [connection signal="pressed" from="gui/Button_eighth" to="." method="_on_button_second_pressed"]
 [connection signal="pressed" from="gui/Button_arrow_left" to="." method="_on_button_arrow_left__pressed"]

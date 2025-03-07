@@ -1,0 +1,112 @@
+[gd_scene load_steps=9 format=3 uid="uid://cd4ycjq1pdvoj"]
+
+[ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="1_lf45r"]
+[ext_resource type="PackedScene" uid="uid://cl6xvn3n8fv36" path="res://scenes/tile_map.tscn" id="2_0xt7a"]
+[ext_resource type="PackedScene" uid="uid://boj5trnp52f1m" path="res://scenes/music_level.tscn" id="3_fyife"]
+[ext_resource type="PackedScene" uid="uid://d0n3s3s3f6by4" path="res://scenes/player.tscn" id="4_ql5um"]
+[ext_resource type="PackedScene" uid="uid://bkehst4np6jr0" path="res://scenes/item.tscn" id="5_lpm7q"]
+[ext_resource type="PackedScene" uid="uid://bd6w0p5iloq7b" path="res://scenes/door.tscn" id="6_wbv5x"]
+[ext_resource type="PackedScene" uid="uid://cp0iu1sqxyqkt" path="res://scenes/enemy.tscn" id="7_riq30"]
+[ext_resource type="PackedScene" uid="uid://b1eb7x7eqi65f" path="res://scenes/gui_in_game.tscn" id="8_ukwcr"]
+
+[node name="level_6" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_lf45r")]
+
+[node name="TileMap" parent="." instance=ExtResource("2_0xt7a")]
+layer_0/tile_data = PackedInt32Array(589824, 786436, 6, 589825, 196611, 7, 589830, 393219, 3, 589836, 3, 7, 327684, 196611, 3, 327683, 3, 3, 393216, 786436, 6, 524288, 786436, 6, 655360, 786436, 6, 655363, 393219, 7, 589842, 393219, 0, 589843, 589827, 0, 655378, 393219, 3, 655379, 589827, 3, 786448, 393219, 7, 786449, 589827, 7, 917508, 196611, 0, 917507, 3, 0, 917504, 786436, 6, 458778, 786436, 6, 65560, 589827, 7, 786458, 786436, 6, 851994, 786436, 6, 65537, 589827, 0, 917530, 786436, 6, -65510, 786436, 6, 26, 786436, 6, 65562, 786436, 6, 131098, 786436, 6, 196634, 786436, 6, 262170, 786436, 6, 327706, 786436, 6, 393242, 786436, 6, 524314, 786436, 6, 589850, 786436, 6, 655386, 786436, 6, 720922, 786436, 6, 983066, 786436, 6, 1048602, 786436, 6, -65536, 786436, 6, 0, 786436, 6, 65536, 786436, 6, 131072, 786436, 6, 196608, 786436, 6, 262144, 786436, 6, 327680, 786436, 6, 458752, 786436, 6, 720896, 786436, 6, 786432, 786436, 6, 851968, 786436, 6, 983040, 786436, 6, 1048576, 786436, 6, 196621, 786436, 6, 262157, 786436, 6, 327693, 786436, 6, 393229, 786436, 6, 458765, 786436, 6, 524301, 786436, 6, 589837, 786436, 6, 655373, 786436, 6, 720909, 786436, 6, 786445, 786436, 6, 851981, 786436, 6, 917517, 786436, 6, 983053, 786436, 6, 131085, 1966084, 6, 851980, 3, 0, 786441, 393219, 7, 786442, 589827, 7, 720903, 196611, 7, 720902, 3, 7, 655364, 589827, 7, 524294, 393219, 0, 524295, 589827, 0, 589831, 589827, 3, 917515, 3, 0, 917516, 196611, 0, 458764, 1966084, 6, 327690, 589827, 7, 327689, 393219, 7, 262148, 196611, 0, 262147, 3, 0, 131078, 393219, 7, 131079, 196611, 7, 131073, 589827, 3, -589824, 786436, 6, -524288, 786436, 6, -458752, 786436, 6, -393216, 786436, 6, -327680, 786436, 6, -262144, 786436, 6, -196608, 786436, 6, -131072, 786436, 6, -589798, 786436, 6, -524262, 786436, 6, -458726, 786436, 6, -393190, 786436, 6, -327654, 786436, 6, -262118, 786436, 6, -196582, 786436, 6, -131046, 786436, 6, 1114112, 786436, 6, 1179648, 786436, 6, 1245184, 786436, 6, 1310720, 786436, 6, 1376256, 786436, 6, 1441792, 786436, 6, 1507328, 786436, 6, 1114138, 786436, 6, 1179674, 786436, 6, 1245210, 786436, 6, 1310746, 786436, 6, 1376282, 786436, 6, 1441818, 786436, 6, 1507354, 786436, 6, -524275, 786436, 6, -458739, 786436, 6, -393203, 786436, 6, -327667, 786436, 6, -262131, 786436, 6, -196595, 786436, 6, -131059, 786436, 6, -589811, 786436, 6, 1048589, 786436, 6, 1114125, 786436, 6, 1179661, 786436, 6, 1245197, 786436, 6, 1310733, 786436, 6, 1376269, 786436, 6, 131086, 196611, 7, 65553, 393219, 7, 65554, 589827, 7, 22, 589827, 7, 21, 393219, 7, 851993, 3, 7, 196631, 3, 7, 196632, 196611, 7, 65559, 393219, 7, 327696, 393219, 7, 327697, 589827, 7, 393235, 393219, 7, 393236, 589827, 7, 524311, 1966084, 6, 524312, 1179652, 6, 524313, 1179652, 6, 589839, 196611, 7, 589838, 393219, 7, 720919, 3, 7, 720920, 589827, 7, 917525, 196611, 7, 917524, 3, 7)
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("3_fyife")]
+
+[node name="player" parent="." instance=ExtResource("4_ql5um")]
+position = Vector2(555, 649)
+
+[node name="GUI_IN_GAME" parent="." instance=ExtResource("8_ukwcr")]
+
+[node name="Item" parent="." instance=ExtResource("5_lpm7q")]
+position = Vector2(1216, 352)
+
+[node name="Item2" parent="." instance=ExtResource("5_lpm7q")]
+position = Vector2(72, 424)
+
+[node name="Item3" parent="." instance=ExtResource("5_lpm7q")]
+position = Vector2(640, 64)
+
+[node name="Item4" parent="." instance=ExtResource("5_lpm7q")]
+position = Vector2(960, 280)
+
+[node name="Item5" parent="." instance=ExtResource("5_lpm7q")]
+position = Vector2(352, 88)
+
+[node name="Item6" parent="." instance=ExtResource("5_lpm7q")]
+position = Vector2(864, 40)
+
+[node name="Item7" parent="." instance=ExtResource("5_lpm7q")]
+position = Vector2(1224, 616)
+
+[node name="Item8" parent="." instance=ExtResource("5_lpm7q")]
+position = Vector2(480, 232)
+
+[node name="Item9" parent="." instance=ExtResource("5_lpm7q")]
+position = Vector2(592, 416)
+
+[node name="Item10" parent="." instance=ExtResource("5_lpm7q")]
+position = Vector2(816, 568)
+
+[node name="Item11" parent="." instance=ExtResource("5_lpm7q")]
+position = Vector2(1152, 24)
+
+[node name="Item12" parent="." instance=ExtResource("5_lpm7q")]
+position = Vector2(192, 648)
+
+[node name="Item13" parent="." instance=ExtResource("5_lpm7q")]
+position = Vector2(80, 24)
+
+[node name="door" parent="." instance=ExtResource("6_wbv5x")]
+position = Vector2(1005, 666)
+
+[node name="spikes" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(168, 512)
+rotation = 4.71239
+
+[node name="spikes2" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(560, 344)
+rotation = 4.71239
+
+[node name="spikes3" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(1156, 534)
+
+[node name="spikes4" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(668, 78)
+
+[node name="spikes5" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(724, 438)
+
+[node name="spikes6" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(192, 184)
+
+[node name="spikes7" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(160, 184)
+
+[node name="spikes8" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(224, 184)
+
+[node name="spikes9" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(1124, 150)
+
+[node name="spikes10" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(984, 320)
+rotation = 1.5708
+
+[node name="spikes11" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(840, 608)
+rotation = 1.5708
+
+[node name="spikes12" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(372, 102)
+
+[node name="spikes13" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(1060, 6)
+
+[node name="spikes14" parent="." instance=ExtResource("7_riq30")]
+position = Vector2(1156, 366)

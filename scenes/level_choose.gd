@@ -22,6 +22,7 @@ func _on_button_arrow_left__pressed() -> void:
 func _on_button_right_pressed() -> void:
 	new_pos = gui.position.x + 1280
 
+
 func _on_button_first_pressed() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()
 	get_tree().change_scene_to_file("res://scenes/node.tscn") # Replace with function body.
@@ -41,3 +42,7 @@ func _on_button_fourth_pressed() -> void:
 func _on_button_fifth_pressed() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()
 	get_tree().change_scene_to_file("res://scenes/level_5.tscn") # Replace with function body.
+
+func _on_button_sixth_pressed() -> void:
+	GlobalInfo.parallax = parallax.get_scroll_offset()
+	get_tree().change_scene_to_file("res://scenes/level_6.tscn") # Replace with function body.

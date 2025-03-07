@@ -16,6 +16,7 @@ var level_file = null
 func _ready() -> void:
 	level_file = get_parent().scene_file_path
 	parallax.set_scroll_offset(GlobalInfo.parallax)
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	
 func _process(delta: float) -> void:
 	if score == 13:
@@ -99,6 +100,8 @@ func on_death():
 func _animation_death_finished() -> void:
 	self.queue_free()
 	GlobalInfo.parallax = parallax.get_scroll_offset()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	get_viewport().warp_mouse(Vector2(640,360))
 	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
 
