@@ -12,11 +12,11 @@ var score = 0
 @onready var door = get_parent().get_node('door')
 @onready var parallax = get_parent().get_node('ParallaxBackground')
 var level_file = null
+var is_dead = false
 
 func _ready() -> void:
 	level_file = get_parent().scene_file_path
 	parallax.set_scroll_offset(GlobalInfo.parallax)
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	
 func _process(delta: float) -> void:
 	if score == 13:
@@ -30,12 +30,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		jump_sound.play()
 		velocity.y = JUMP_VELOCITY
-		
-	
-	#if Input.is_action_just_pressed("ui_accept") and not is_on_floor():
-	#	velocity.y = JUMP_VELOCITY
-		
-
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
@@ -91,17 +85,17 @@ func handle_movement_animation(direction):
 		toggle_flip_sprite(direction)
 
 func on_death():
-	death_sound.play()
-	count.set_text('score: 0')
-	animated_sprite.play("death")
-	set_physics_process(false)
-	GlobalInfo.prev_level = level_file
+	if is_dead == false:
+		death_sound.play()
+		count.set_text('score: 0')
+		animated_sprite.play("death")
+		set_physics_process(false)
+		GlobalInfo.prev_level = level_file
+		is_dead = true
 
 func _animation_death_finished() -> void:
 	self.queue_free()
 	GlobalInfo.parallax = parallax.get_scroll_offset()
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	get_viewport().warp_mouse(Vector2(640,360))
 	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
 

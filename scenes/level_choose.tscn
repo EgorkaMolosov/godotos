@@ -12,8 +12,8 @@ script = ExtResource("1_n7efv")
 [node name="gui" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 984.0
+offset_bottom = 512.0
 
 [node name="Button_arrow_right" parent="gui" instance=ExtResource("5_qo7hf")]
 layout_mode = 0
