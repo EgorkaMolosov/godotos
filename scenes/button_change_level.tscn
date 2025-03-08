@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cby58cwtglwdq"]
+
+[ext_resource type="FontFile" uid="uid://cpbwjmlx4yvbb" path="res://fonts/Bloq.ttf" id="1_j06xa"]
+
+[node name="Button_first" type="Button"]
+offset_left = 296.0
+offset_top = 200.0
+offset_right = 513.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("1_j06xa")
+theme_override_font_sizes/font_size = 40
+text = "LEVEL 1"

@@ -310,6 +310,8 @@ animations = [{
 [node name="player" type="CharacterBody2D"]
 visibility_layer = 8
 position = Vector2(27, 9)
+platform_on_leave = 1
+platform_floor_layers = 4294901761
 script = ExtResource("1_ew2xb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

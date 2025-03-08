@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://qdj3o1jasumu"]
+[gd_scene load_steps=7 format=3 uid="uid://qdj3o1jasumu"]
 
 [ext_resource type="Script" path="res://scenes/level_choose.gd" id="1_n7efv"]
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="2_cl84t"]
 [ext_resource type="FontFile" uid="uid://cpbwjmlx4yvbb" path="res://fonts/Bloq.ttf" id="3_jkyhn"]
 [ext_resource type="PackedScene" uid="uid://b3vrt528eks6o" path="res://scenes/button_arrow.tscn" id="4_t6adh"]
 [ext_resource type="PackedScene" uid="uid://vjw6jk05tbsn" path="res://scenes/button_arrow_right.tscn" id="5_qo7hf"]
+[ext_resource type="PackedScene" uid="uid://cby58cwtglwdq" path="res://scenes/button_change_level.tscn" id="5_vxg86"]
 
 [node name="Level_choose" type="Node2D"]
 script = ExtResource("1_n7efv")
@@ -14,6 +15,14 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 984.0
 offset_bottom = 512.0
+
+[node name="Button_arrow_left" parent="gui" instance=ExtResource("4_t6adh")]
+layout_mode = 0
+offset_left = 1176.0
+offset_top = 320.0
+offset_right = 1256.0
+offset_bottom = 400.0
+focus_mode = 0
 
 [node name="Button_arrow_right" parent="gui" instance=ExtResource("5_qo7hf")]
 layout_mode = 0
@@ -34,104 +43,101 @@ theme_override_font_sizes/font_size = 29
 text = "	LEAVE THE GAME"
 metadata/_edit_use_anchors_ = true
 
-[node name="Button_first" type="Button" parent="gui"]
+[node name="Button_first" parent="gui" instance=ExtResource("5_vxg86")]
 layout_mode = 0
-offset_left = 296.0
-offset_top = 200.0
-offset_right = 513.0
-offset_bottom = 288.0
-theme_override_fonts/font = ExtResource("3_jkyhn")
-theme_override_font_sizes/font_size = 40
-text = "LEVEL 1"
+offset_left = 304.0
+offset_top = 216.0
+offset_right = 521.0
+offset_bottom = 304.0
 
-[node name="Button_second" type="Button" parent="gui"]
+[node name="Button_second" parent="gui" instance=ExtResource("5_vxg86")]
 layout_mode = 0
-offset_left = 768.0
-offset_top = 200.0
-offset_right = 985.0
-offset_bottom = 288.0
-theme_override_fonts/font = ExtResource("3_jkyhn")
-theme_override_font_sizes/font_size = 40
+offset_left = 760.0
+offset_top = 216.0
+offset_right = 977.0
+offset_bottom = 304.0
 text = "LEVEL 2"
 
-[node name="Button_third" type="Button" parent="gui"]
+[node name="Button_third" parent="gui" instance=ExtResource("5_vxg86")]
 layout_mode = 0
-offset_left = 296.0
-offset_top = 416.0
-offset_right = 513.0
-offset_bottom = 504.0
-theme_override_fonts/font = ExtResource("3_jkyhn")
-theme_override_font_sizes/font_size = 40
+offset_left = 304.0
+offset_top = 400.0
+offset_right = 521.0
+offset_bottom = 488.0
 text = "LEVEL 3"
 
-[node name="Button_fourth" type="Button" parent="gui"]
+[node name="Button_fourth" parent="gui" instance=ExtResource("5_vxg86")]
 layout_mode = 0
-offset_left = 768.0
-offset_top = 416.0
-offset_right = 985.0
-offset_bottom = 504.0
-theme_override_fonts/font = ExtResource("3_jkyhn")
-theme_override_font_sizes/font_size = 40
+offset_left = 760.0
+offset_top = 400.0
+offset_right = 977.0
+offset_bottom = 488.0
 text = "LEVEL 4"
 
-[node name="Button_fifth" type="Button" parent="gui"]
+[node name="Button_fifth" parent="gui" instance=ExtResource("5_vxg86")]
 layout_mode = 0
-offset_left = 1576.0
-offset_top = 200.0
-offset_right = 1793.0
-offset_bottom = 288.0
-theme_override_fonts/font = ExtResource("3_jkyhn")
-theme_override_font_sizes/font_size = 40
+offset_left = 1584.0
+offset_top = 216.0
+offset_right = 1801.0
+offset_bottom = 304.0
 text = "LEVEL 5"
 
-[node name="Button_sixth" type="Button" parent="gui"]
+[node name="Button_sixth" parent="gui" instance=ExtResource("5_vxg86")]
 layout_mode = 0
-offset_left = 2048.0
-offset_top = 200.0
-offset_right = 2265.0
-offset_bottom = 288.0
-theme_override_fonts/font = ExtResource("3_jkyhn")
-theme_override_font_sizes/font_size = 40
+offset_left = 2040.0
+offset_top = 216.0
+offset_right = 2257.0
+offset_bottom = 304.0
 text = "LEVEL 6"
 
-[node name="Button_seventh" type="Button" parent="gui"]
+[node name="Button_seventh" parent="gui" instance=ExtResource("5_vxg86")]
 layout_mode = 0
-offset_left = 1576.0
-offset_top = 416.0
-offset_right = 1793.0
-offset_bottom = 504.0
-theme_override_fonts/font = ExtResource("3_jkyhn")
-theme_override_font_sizes/font_size = 40
+offset_left = 1584.0
+offset_top = 400.0
+offset_right = 1801.0
+offset_bottom = 488.0
 text = "LEVEL 7"
 
-[node name="Button_eighth" type="Button" parent="gui"]
+[node name="Button_eight" parent="gui" instance=ExtResource("5_vxg86")]
 layout_mode = 0
-offset_left = 2048.0
-offset_top = 416.0
-offset_right = 2265.0
-offset_bottom = 504.0
-theme_override_fonts/font = ExtResource("3_jkyhn")
-theme_override_font_sizes/font_size = 40
+offset_left = 2040.0
+offset_top = 400.0
+offset_right = 2257.0
+offset_bottom = 488.0
 text = "LEVEL 8"
-
-[node name="Button_arrow_left" parent="gui" instance=ExtResource("4_t6adh")]
-layout_mode = 0
-offset_left = 1176.0
-offset_top = 320.0
-offset_right = 1256.0
-offset_bottom = 400.0
-focus_mode = 0
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_cl84t")]
 
-[connection signal="pressed" from="gui/Button_arrow_right" to="." method="_on_button_right_pressed"]
-[connection signal="pressed" from="gui/Button_Leave" to="." method="_on_button_leave_pressed"]
-[connection signal="pressed" from="gui/Button_first" to="." method="_on_button_first_pressed"]
-[connection signal="pressed" from="gui/Button_second" to="." method="_on_button_second_pressed"]
-[connection signal="pressed" from="gui/Button_third" to="." method="_on_button_third_pressed"]
-[connection signal="pressed" from="gui/Button_fourth" to="." method="_on_button_fourth_pressed"]
-[connection signal="pressed" from="gui/Button_fifth" to="." method="_on_button_fifth_pressed"]
-[connection signal="pressed" from="gui/Button_sixth" to="." method="_on_button_sixth_pressed"]
-[connection signal="pressed" from="gui/Button_seventh" to="." method="_on_button_second_pressed"]
-[connection signal="pressed" from="gui/Button_eighth" to="." method="_on_button_second_pressed"]
+[connection signal="mouse_entered" from="gui/Button_arrow_left" to="." method="_on_button_arrow_left_mouse_entered"]
+[connection signal="mouse_exited" from="gui/Button_arrow_left" to="." method="_on_button_arrow_left_mouse_exited"]
 [connection signal="pressed" from="gui/Button_arrow_left" to="." method="_on_button_arrow_left__pressed"]
+[connection signal="mouse_entered" from="gui/Button_arrow_right" to="." method="_on_button_arrow_right_mouse_entered"]
+[connection signal="mouse_exited" from="gui/Button_arrow_right" to="." method="_on_button_arrow_right_mouse_exited"]
+[connection signal="pressed" from="gui/Button_arrow_right" to="." method="_on_button_right_pressed"]
+[connection signal="mouse_entered" from="gui/Button_Leave" to="." method="_on_button_leave_mouse_entered"]
+[connection signal="mouse_exited" from="gui/Button_Leave" to="." method="_on_button_leave_mouse_exited"]
+[connection signal="pressed" from="gui/Button_Leave" to="." method="_on_button_leave_pressed"]
+[connection signal="mouse_entered" from="gui/Button_first" to="." method="_on_button_change_level_mouse_entered"]
+[connection signal="mouse_exited" from="gui/Button_first" to="." method="_on_button_change_level_mouse_exited"]
+[connection signal="pressed" from="gui/Button_first" to="." method="_on_button_first_pressed"]
+[connection signal="mouse_entered" from="gui/Button_second" to="." method="_on_button_change_level_mouse_entered"]
+[connection signal="mouse_exited" from="gui/Button_second" to="." method="_on_button_change_level_mouse_exited"]
+[connection signal="pressed" from="gui/Button_second" to="." method="_on_button_second_pressed"]
+[connection signal="mouse_entered" from="gui/Button_third" to="." method="_on_button_change_level_mouse_entered"]
+[connection signal="mouse_exited" from="gui/Button_third" to="." method="_on_button_change_level_mouse_exited"]
+[connection signal="pressed" from="gui/Button_third" to="." method="_on_button_third_pressed"]
+[connection signal="mouse_entered" from="gui/Button_fourth" to="." method="_on_button_change_level_mouse_entered"]
+[connection signal="mouse_exited" from="gui/Button_fourth" to="." method="_on_button_change_level_mouse_exited"]
+[connection signal="pressed" from="gui/Button_fourth" to="." method="_on_button_fourth_pressed"]
+[connection signal="mouse_entered" from="gui/Button_fifth" to="." method="_on_button_change_level_mouse_entered"]
+[connection signal="mouse_exited" from="gui/Button_fifth" to="." method="_on_button_change_level_mouse_exited"]
+[connection signal="pressed" from="gui/Button_fifth" to="." method="_on_button_fifth_pressed"]
+[connection signal="mouse_entered" from="gui/Button_sixth" to="." method="_on_button_change_level_mouse_entered"]
+[connection signal="mouse_exited" from="gui/Button_sixth" to="." method="_on_button_change_level_mouse_exited"]
+[connection signal="pressed" from="gui/Button_sixth" to="." method="_on_button_sixth_pressed"]
+[connection signal="mouse_entered" from="gui/Button_seventh" to="." method="_on_button_change_level_mouse_entered"]
+[connection signal="mouse_exited" from="gui/Button_seventh" to="." method="_on_button_change_level_mouse_exited"]
+[connection signal="pressed" from="gui/Button_seventh" to="." method="_on_button_seventh_pressed"]
+[connection signal="mouse_entered" from="gui/Button_eight" to="." method="_on_button_change_level_mouse_entered"]
+[connection signal="mouse_exited" from="gui/Button_eight" to="." method="_on_button_change_level_mouse_exited"]
+[connection signal="pressed" from="gui/Button_eight" to="." method="_on_button_eight_pressed"]
