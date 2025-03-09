@@ -16,6 +16,16 @@ anchors_preset = 0
 offset_right = 984.0
 offset_bottom = 512.0
 
+[node name="Button_Leave" type="Button" parent="gui"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 225.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("3_jkyhn")
+theme_override_font_sizes/font_size = 29
+text = "	LEAVE THE GAME"
+metadata/_edit_use_anchors_ = true
+
 [node name="Button_arrow_left" parent="gui" instance=ExtResource("4_t6adh")]
 layout_mode = 0
 offset_left = 1176.0
@@ -31,17 +41,6 @@ offset_top = 320.0
 offset_right = 1384.0
 offset_bottom = 400.0
 focus_mode = 0
-
-[node name="Button_Leave" type="Button" parent="gui"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 225.0
-offset_bottom = 96.0
-theme_override_fonts/font = ExtResource("3_jkyhn")
-theme_override_font_sizes/font_size = 29
-text = "	LEAVE THE GAME"
-metadata/_edit_use_anchors_ = true
 
 [node name="Button_first" parent="gui" instance=ExtResource("5_vxg86")]
 layout_mode = 0
@@ -108,15 +107,15 @@ text = "LEVEL 8"
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_cl84t")]
 
+[connection signal="mouse_entered" from="gui/Button_Leave" to="." method="_on_button_leave_mouse_entered"]
+[connection signal="mouse_exited" from="gui/Button_Leave" to="." method="_on_button_leave_mouse_exited"]
+[connection signal="pressed" from="gui/Button_Leave" to="." method="_on_button_leave_pressed"]
 [connection signal="mouse_entered" from="gui/Button_arrow_left" to="." method="_on_button_arrow_left_mouse_entered"]
 [connection signal="mouse_exited" from="gui/Button_arrow_left" to="." method="_on_button_arrow_left_mouse_exited"]
 [connection signal="pressed" from="gui/Button_arrow_left" to="." method="_on_button_arrow_left__pressed"]
 [connection signal="mouse_entered" from="gui/Button_arrow_right" to="." method="_on_button_arrow_right_mouse_entered"]
 [connection signal="mouse_exited" from="gui/Button_arrow_right" to="." method="_on_button_arrow_right_mouse_exited"]
 [connection signal="pressed" from="gui/Button_arrow_right" to="." method="_on_button_right_pressed"]
-[connection signal="mouse_entered" from="gui/Button_Leave" to="." method="_on_button_leave_mouse_entered"]
-[connection signal="mouse_exited" from="gui/Button_Leave" to="." method="_on_button_leave_mouse_exited"]
-[connection signal="pressed" from="gui/Button_Leave" to="." method="_on_button_leave_pressed"]
 [connection signal="mouse_entered" from="gui/Button_first" to="." method="_on_button_change_level_mouse_entered"]
 [connection signal="mouse_exited" from="gui/Button_first" to="." method="_on_button_change_level_mouse_exited"]
 [connection signal="pressed" from="gui/Button_first" to="." method="_on_button_first_pressed"]

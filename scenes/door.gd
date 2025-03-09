@@ -7,7 +7,8 @@ var mass = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.add_to_group("ignored") # Replace with function body.
+	self.add_to_group("ignored")
+	Animated_sprite.play('default') # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,4 +25,9 @@ func _open():
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if not self.is_in_group("ignored"):
-		mass = true# Replace with function body.
+		if mass == false:
+			mass = true# Replace with function body.
+			print(mass)
+		if mass == true:
+			Animated_sprite.play('opened')
+	
