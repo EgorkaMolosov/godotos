@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://8penk3w8kmgv"]
+[gd_scene load_steps=13 format=3 uid="uid://8penk3w8kmgv"]
 
 [ext_resource type="PackedScene" uid="uid://cdxtqw2bh5seq" path="res://scenes/node_2d.tscn" id="1_533lq"]
 [ext_resource type="Script" path="res://scenes/node.gd" id="2_ynew7"]
@@ -12,157 +12,165 @@
 [ext_resource type="PackedScene" uid="uid://cp0iu1sqxyqkt" path="res://scenes/enemy.tscn" id="10_t18f7"]
 [ext_resource type="PackedScene" uid="uid://bd6w0p5iloq7b" path="res://scenes/door.tscn" id="11_825b8"]
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_hqs88"]
+vertices = PackedVector2Array(1018, 246, 902, 246, 634, 234.773, 634, 198, 759.227, 202, 826, 150, 742, 150, 490, 138.773, 490, 102, 942, 78, 1134, 258, 1218, 258, 1286, 342, 1190, 342, 1130, 331.031, 1130, 294, 1158.97, 106, 1218, 174, 1134, 174, 1074, 162, 1074, 78, 1148.49, 99.0078, 1060.29, 196.289, 1078, 294, 1018, 282.773, 1050.77, 202, 380.492, 339.008, 314, 438, 262, 438, 250, 426.773, 250, 390, 374, 327.656, 642, 498, 642, 414, 654, 462, 654, 546, 1258, 90.7734, 1258, 54, 1286, 10, 1078, 566, 1078, 614, 1046, 614, 1026, 594, 1026, 462, 1286, 394, 1286, 566, 1238, 566, 1210, 522.773, 1210, 422, 1252.29, 100.289, 1242.77, 106, 750, 462, 750, 558, 738, 546, 738, 462, 702, 558, 458, 586, 702, 642, 586, 630, 10, 10, 1142, 54, 1206.97, 394, 1094, 422, 1162, 614, 1204.29, 532.289, 1238, 663.656, 1142, 87.6563, 244.289, 436.289, 262, 473.203, 458, 470, 558, 498, 154, 54, 1196.49, 387.008, 1190, 375.656, 978, 414, 826, 378.773, 826, 278, 1095.23, 346, 314, 475.031, 374, 470, 374, 567.656, 305.922, 487.148, 586, 666.773, 662, 662, 662, 710, 490, 330.773, 490, 294, 710, 278, 702, 318, 634, 374, 550, 374, 298, 138.773, 298, 102, 374, 135.656, 380.492, 147.008, 374, 102, 826, 186.773, 950, 183.656, 956.492, 195.008, 154, 90.7734, 70, 54, 10, 294, 38, 198, 250, 282.773, 250, 246, 567.227, 250, 374, 294, 122, 235.031, 122, 198, 550, 233.203, 558.07, 244.5, 550, 198, 198.969, 154, 282.773, 154, 942, 162, 950, 162, 1066, 186.773, 1066, 162, 710, 318, 786, 402, 786, 394, 810.773, 394, 1254.97, 682, 1286, 682, 1286, 710, 1162, 710, 1244.49, 675.008, 1194.77, 538, 1130, 614, 1130, 566, 1110.97, 538, 1100.49, 531.008, 1094, 519.656, 978, 462, 820.289, 388.289, 846, 414, 846, 462, 702, 402, 634, 414, 550, 490, 558, 490, 882, 654, 834, 642, 834, 634, 842, 634, 894, 654, 842, 566, 834, 566, 834, 546, 942, 546, 942, 594, 1046, 630, 998, 630, 1014.97, 682, 1046, 682, 1046, 710, 978, 710, 1004.49, 675.008, 978, 654, 998, 663.656, 894, 710, 882, 710, 702, 654, 702, 662, 358, 662, 358, 710, 258, 710, 258, 654, 10, 654, 10, 546, 126, 546, 126, 642, 161.813, 654, 210, 642, 134, 390, 106, 422, 74, 422, 74, 374, 140.492, 291.008, 150.969, 298, 22, 374, 22, 422, 10, 422, 10, 346, 42.7734, 346, 52.2891, 340.289, 580.289, 676.289, 902, 279.656, 628.289, 244.289, 742, 185.203, 484.289, 148.289, 244.289, 292.289, 234.773, 442, 1121.92, 343.148, 1078, 329.203, 1012.29, 292.289, 484.289, 340.289, 474.773, 346, 390.969, 346, 234.773, 298, 749.773, 654, 58, 330.773, 292.289, 148.289, 390.969, 154, 820.289, 196.289, 966.969, 202, 1002.77, 298, 1086.07, 340.5, 288.828, 490, 380.492, 579.008, 148.289, 100.289, 570.773, 682, 410, 710, 486.969, 682, 476.492, 675.008, 410, 662, 470, 663.656, 470, 630, 390.969, 586, 908.492, 291.008, 150.969, 442, 210, 462, 750.07, 196.5, 474.773, 154, 744.453, 656.492, 737.813, 654, 279.227, 490, 270.07, 484.5, 173.773, 654, 168.453, 656.492, 106, 462, 140.492, 435.008, 134, 423.656, 58, 294, 134, 279.656, 113.922, 247.148, 134, 246, 96.8281, 250, 182, 102, 182, 135.656, 138.773, 106, 1104.83, 346, 87.2266, 106, 188.492, 147.008, 810.773, 202, 918.969, 298, 618.773, 250, 54.9688, 250, 44.4922, 243.008, 38, 231.656, 70, 89.2031, 78.0703, 100.5)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8, 9), PackedInt32Array(10, 11, 12, 13, 14, 15), PackedInt32Array(16, 17, 18, 19, 20, 21), PackedInt32Array(22, 18, 10, 15, 23, 24, 0, 25), PackedInt32Array(26, 27, 28, 29, 30, 31), PackedInt32Array(32, 33, 34, 35), PackedInt32Array(36, 37, 38, 12), PackedInt32Array(39, 40, 41, 42, 43), PackedInt32Array(44, 45, 46, 47, 48), PackedInt32Array(36, 12, 11, 17, 49), PackedInt32Array(50, 49, 17), PackedInt32Array(51, 52, 53, 54), PackedInt32Array(53, 52, 55, 35), PackedInt32Array(56, 35, 55, 57, 58), PackedInt32Array(59, 38, 37, 60), PackedInt32Array(61, 44, 48, 62), PackedInt32Array(63, 64, 47, 46, 65), PackedInt32Array(16, 50, 17), PackedInt32Array(66, 21, 20), PackedInt32Array(67, 29, 28, 68), PackedInt32Array(35, 56, 69, 70), PackedInt32Array(60, 66, 20), PackedInt32Array(59, 60, 20, 9, 71), PackedInt32Array(72, 61, 62), PackedInt32Array(73, 72, 62, 74, 75, 76, 77), PackedInt32Array(78, 27, 79, 80), PackedInt32Array(81, 78, 80), PackedInt32Array(82, 58, 83, 84), PackedInt32Array(85, 86, 87, 88, 89, 90), PackedInt32Array(91, 92, 93, 94), PackedInt32Array(95, 93, 92), PackedInt32Array(96, 5, 97, 98), PackedInt32Array(9, 99, 71), PackedInt32Array(59, 71, 100), PackedInt32Array(101, 59, 100, 102), PackedInt32Array(103, 104, 105, 87, 86, 106), PackedInt32Array(107, 108, 109, 110), PackedInt32Array(111, 109, 108, 112, 113), PackedInt32Array(114, 115, 97), PackedInt32Array(114, 97, 5), PackedInt32Array(9, 114, 5), PackedInt32Array(116, 117, 19, 18), PackedInt32Array(87, 118, 88), PackedInt32Array(119, 120, 121), PackedInt32Array(122, 123, 124, 125), PackedInt32Array(126, 122, 125), PackedInt32Array(126, 125, 63, 65), PackedInt32Array(127, 64, 63), PackedInt32Array(63, 128, 129, 127), PackedInt32Array(130, 127, 129, 39), PackedInt32Array(131, 130, 39), PackedInt32Array(131, 39, 43, 132), PackedInt32Array(62, 132, 43, 74), PackedInt32Array(43, 133, 74), PackedInt32Array(134, 135, 136, 51, 121), PackedInt32Array(137, 33, 138, 89, 88), PackedInt32Array(139, 140, 70), PackedInt32Array(141, 142, 143, 144, 145), PackedInt32Array(146, 147, 148, 149), PackedInt32Array(144, 146, 149, 150, 145), PackedInt32Array(42, 41, 151, 152, 150), PackedInt32Array(153, 154, 155, 156), PackedInt32Array(157, 153, 156), PackedInt32Array(157, 156, 158, 159), PackedInt32Array(152, 159, 158, 150), PackedInt32Array(150, 158, 145), PackedInt32Array(145, 160, 161, 141), PackedInt32Array(162, 163, 83), PackedInt32Array(164, 165, 166, 167), PackedInt32Array(168, 169, 170, 171), PackedInt32Array(172, 168, 171, 173), PackedInt32Array(174, 175, 176, 177, 178, 179), PackedInt32Array(180, 181, 182, 183), PackedInt32Array(180, 183, 184, 177), PackedInt32Array(177, 184, 185), PackedInt32Array(186, 82, 84), PackedInt32Array(2, 1, 187, 188), PackedInt32Array(7, 6, 189, 190), PackedInt32Array(191, 103, 106, 31, 30), PackedInt32Array(192, 67, 68), PackedInt32Array(14, 13, 73, 193), PackedInt32Array(24, 23, 194, 195), PackedInt32Array(54, 34, 33, 137), PackedInt32Array(70, 32, 35), PackedInt32Array(139, 70, 69), PackedInt32Array(85, 90, 139, 69, 196), PackedInt32Array(75, 74, 135, 134), PackedInt32Array(119, 121, 51), PackedInt32Array(137, 119, 51, 54), PackedInt32Array(197, 196, 69), PackedInt32Array(198, 197, 69, 79, 27), PackedInt32Array(26, 198, 27), PackedInt32Array(199, 191, 30, 174), PackedInt32Array(179, 199, 174), PackedInt32Array(142, 141, 200, 57), PackedInt32Array(177, 185, 201, 178), PackedInt32Array(202, 91, 94, 203), PackedInt32Array(204, 96, 98, 205, 0), PackedInt32Array(206, 195, 194, 207), PackedInt32Array(167, 208, 81, 80, 209, 164), PackedInt32Array(210, 99, 9, 8, 95), PackedInt32Array(211, 186, 84), PackedInt32Array(211, 84, 212, 213), PackedInt32Array(214, 213, 212, 215), PackedInt32Array(216, 214, 215), PackedInt32Array(56, 217, 216, 215, 218), PackedInt32Array(188, 187, 219, 76), PackedInt32Array(220, 192, 68, 221), PackedInt32Array(22, 116, 18), PackedInt32Array(205, 25, 0), PackedInt32Array(190, 189, 222, 223), PackedInt32Array(200, 224, 225), PackedInt32Array(57, 200, 225), PackedInt32Array(57, 225, 162), PackedInt32Array(57, 162, 83, 58), PackedInt32Array(56, 58, 217), PackedInt32Array(218, 215, 164, 209), PackedInt32Array(226, 208, 167), PackedInt32Array(227, 226, 167, 173, 221), PackedInt32Array(228, 229, 172), PackedInt32Array(228, 172, 173), PackedInt32Array(167, 228, 173), PackedInt32Array(68, 227, 221), PackedInt32Array(220, 221, 230), PackedInt32Array(231, 220, 230, 175), PackedInt32Array(232, 231, 175), PackedInt32Array(174, 232, 175), PackedInt32Array(178, 201, 233, 234), PackedInt32Array(235, 236, 234, 233, 101, 237), PackedInt32Array(210, 95, 92), PackedInt32Array(210, 92, 238), PackedInt32Array(210, 238, 239, 240), PackedInt32Array(241, 193, 73), PackedInt32Array(242, 240, 239, 243, 108), PackedInt32Array(113, 202, 203, 111), PackedInt32Array(244, 204, 0), PackedInt32Array(107, 110, 105, 104), PackedInt32Array(245, 206, 207), PackedInt32Array(223, 222, 4, 3), PackedInt32Array(77, 241, 73), PackedInt32Array(207, 77, 76, 245), PackedInt32Array(219, 245, 76), PackedInt32Array(188, 76, 87, 246), PackedInt32Array(105, 246, 87), PackedInt32Array(107, 104, 236), PackedInt32Array(235, 107, 236), PackedInt32Array(247, 237, 101), PackedInt32Array(248, 247, 101), PackedInt32Array(249, 248, 101), PackedInt32Array(102, 249, 101), PackedInt32Array(102, 100, 250), PackedInt32Array(102, 250, 251, 108), PackedInt32Array(108, 251, 242), PackedInt32Array(108, 243, 112), PackedInt32Array(111, 203, 223, 3), PackedInt32Array(0, 4, 244)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(0, 0, 1296, 0, 1296, 0, 1296, 720, 1296, 720, 0, 720, 0, 720)])
+
 [node name="World" instance=ExtResource("1_533lq")]
 script = ExtResource("2_ynew7")
 
-[node name="spikes16" parent="." index="0" instance=ExtResource("10_t18f7")]
-position = Vector2(152, 80)
-rotation = 1.5708
+[node name="bats" parent="." index="0" instance=ExtResource("9_4xr33")]
+position = Vector2(432, 232)
 
-[node name="TileMap" parent="." index="1" instance=ExtResource("3_fpi7h")]
+[node name="bats2" parent="." index="1" instance=ExtResource("9_4xr33")]
+position = Vector2(1016, 72)
+
+[node name="bats3" parent="." index="2" instance=ExtResource("9_4xr33")]
+position = Vector2(288, 432)
+
+[node name="bats4" parent="." index="3" instance=ExtResource("9_4xr33")]
+position = Vector2(32, 40)
+
+[node name="bats5" parent="." index="4" instance=ExtResource("9_4xr33")]
+position = Vector2(1152, 416)
+
+[node name="bats6" parent="." index="5" instance=ExtResource("9_4xr33")]
+position = Vector2(768, 272)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="6"]
+navigation_polygon = SubResource("NavigationPolygon_hqs88")
+
+[node name="TileMap" parent="NavigationRegion2D" index="0" instance=ExtResource("3_fpi7h")]
 visibility_layer = 2
 layer_0/tile_data = PackedInt32Array(589824, 3, 0, 589825, 196611, 0, 524291, 3, 7, 524292, 196611, 7, 589829, 393219, 7, 589830, 589827, 7, 524299, 393219, 0, 524300, 196611, 0, 589835, 393219, 3, 589836, 1966084, 6, 393231, 3, 0, 393232, 196611, 0, 458767, 1966084, 6, 458768, 196611, 3, 327684, 196611, 7, 327683, 3, 7, 393216, 196611, 7, 393225, 196611, 7, 393224, 3, 7, 262155, 393219, 7, 262156, 196611, 7, 262145, 3, 7, 262146, 589827, 7, 131080, 3, 7, 131081, 196611, 7, 131077, 196611, 7, 131076, 3, 7, 524288, 393219, 0, 524289, 589827, 0, 196624, 196611, 7, 196623, 393219, 7, 655368, 3, 0, 655369, 589827, 0, 720904, 3, 3, 655374, 1966084, 6, 655361, 1179652, 6, 655362, 1179652, 6, 655360, 1179652, 6, 655363, 131077, 0, 589842, 4, 0, 589843, 131077, 0, 655377, 1179652, 6, 655378, 1179652, 6, 655379, 1179652, 6, 655380, 131077, 0, 655376, 4, 0, 720912, 786436, 6, 786448, 1179652, 6, 720916, 786436, 6, 917520, 4, 0, 786447, 4, 0, 786449, 589827, 0, 917519, 4, 0, 851983, 786435, 6, 917518, 3, 0, 851978, 3, 7, 851979, 196611, 7, 917521, 131077, 0, 917523, 1966084, 6, 720899, 786436, 6, 786435, 786436, 6, 917508, 131077, 0, 917507, 131077, 0, 917506, 131077, 0, 917505, 131077, 0, 917504, 131077, 0, 851971, 786435, 6, 589847, 3, 0, 589848, 196611, 0, 655383, 3, 3, 655384, 196611, 3, 458778, 196611, 7, 458777, 3, 7, 393238, 393219, 7, 393239, 589827, 7, 327700, 196611, 7, 327699, 3, 7, 262168, 1966084, 6, 131093, 131077, 0, 131092, 4, 0, 196629, 196611, 3, 196628, 3, 3, 65561, 196611, 7, 65560, 3, 7, 851989, 3, 7, 851990, 3, 0, 851991, 196611, 0, 786455, 589827, 0, 786454, 393219, 0, 917526, 3, 3, 917527, 196611, 3, 786458, 3, 0, 851994, 3, 3, 917512, 589827, 0, 917511, 393219, 0, 65537, 393219, 7, 65538, 196611, 7, 720905, 589827, 3, 65535, 2, 0, 131071, 2, 0, 196607, 2, 0, 262143, 2, 0, 327679, 2, 0, 393215, 2, 0, 458751, 2, 0, 524287, 2, 0, 589823, 2, 0, 655359, 2, 0, 720895, 2, 0, 786431, 2, 0, 851967, 2, 0, 917503, 2, 0, 983039, 2, 0, 1048575, 2, 0, -1, 2, 0, -65537, 2, 0, -131073, 2, 0, -196609, 2, 0, -262145, 2, 0, -327681, 2, 0, -393217, 2, 0, -458753, 2, 0, 1114111, 2, 0, 1179647, 2, 0, 1245183, 2, 0, 1245211, 2, 0, 1179675, 2, 0, 1114139, 2, 0, 1048603, 2, 0, 983067, 2, 0, 917531, 2, 0, 851995, 2, 0, 786459, 2, 0, 720923, 2, 0, 655387, 2, 0, 589851, 2, 0, 524315, 2, 0, 458779, 2, 0, 393243, 2, 0, 327707, 2, 0, 262171, 2, 0, 196635, 2, 0, 131099, 2, 0, 65563, 2, 0, 27, 2, 0, -65509, 2, 0, -131045, 2, 0, -196581, 2, 0, -262117, 2, 0, -327653, 2, 0, -393189, 2, 0)
 
-[node name="player" parent="." index="2" instance=ExtResource("7_2akky")]
+[node name="player" parent="." index="7" instance=ExtResource("7_2akky")]
 visibility_layer = 524288
 position = Vector2(592, 176)
 collision_layer = 7
 collision_mask = 7
 
-[node name="apple3" parent="." index="3" instance=ExtResource("5_d8rut")]
+[node name="spikes16" parent="." index="8" instance=ExtResource("10_t18f7")]
+position = Vector2(152, 80)
+rotation = 1.5708
+
+[node name="apple3" parent="." index="9" instance=ExtResource("5_d8rut")]
 position = Vector2(4096, 1368)
 
-[node name="ParallaxBackground" parent="." index="4" instance=ExtResource("6_ad3cy")]
+[node name="ParallaxBackground" parent="." index="10" instance=ExtResource("6_ad3cy")]
 layer = -2
 
-[node name="apple4" parent="." index="5" instance=ExtResource("5_d8rut")]
+[node name="apple4" parent="." index="11" instance=ExtResource("5_d8rut")]
 position = Vector2(848, 560)
 
-[node name="apple5" parent="." index="6" instance=ExtResource("5_d8rut")]
+[node name="apple5" parent="." index="12" instance=ExtResource("5_d8rut")]
 position = Vector2(432, 448)
 
-[node name="apple8" parent="." index="7" instance=ExtResource("5_d8rut")]
+[node name="apple8" parent="." index="13" instance=ExtResource("5_d8rut")]
 position = Vector2(208, 224)
 
-[node name="Item" parent="." index="8" instance=ExtResource("5_d8rut")]
+[node name="Item" parent="." index="14" instance=ExtResource("5_d8rut")]
 position = Vector2(784, 128)
 
-[node name="Item3" parent="." index="9" instance=ExtResource("5_d8rut")]
+[node name="Item3" parent="." index="15" instance=ExtResource("5_d8rut")]
 position = Vector2(1200, 32)
 
-[node name="Item8" parent="." index="10" instance=ExtResource("5_d8rut")]
+[node name="Item8" parent="." index="16" instance=ExtResource("5_d8rut")]
 position = Vector2(1240, 312)
 
-[node name="Item9" parent="." index="11" instance=ExtResource("5_d8rut")]
+[node name="Item9" parent="." index="17" instance=ExtResource("5_d8rut")]
 position = Vector2(936, 632)
 
-[node name="Item11" parent="." index="12" instance=ExtResource("5_d8rut")]
+[node name="Item11" parent="." index="18" instance=ExtResource("5_d8rut")]
 position = Vector2(432, 72)
 
-[node name="Item12" parent="." index="13" instance=ExtResource("5_d8rut")]
+[node name="Item12" parent="." index="19" instance=ExtResource("5_d8rut")]
 position = Vector2(48, 360)
 
-[node name="Item15" parent="." index="14" instance=ExtResource("5_d8rut")]
+[node name="Item15" parent="." index="20" instance=ExtResource("5_d8rut")]
 position = Vector2(528, 592)
 
-[node name="Item16" parent="." index="15" instance=ExtResource("5_d8rut")]
+[node name="Item16" parent="." index="21" instance=ExtResource("5_d8rut")]
 position = Vector2(1264, 552)
 
-[node name="Item17" parent="." index="16" instance=ExtResource("5_d8rut")]
+[node name="Item17" parent="." index="22" instance=ExtResource("5_d8rut")]
 position = Vector2(904, 384)
 
-[node name="Item18" parent="." index="17" instance=ExtResource("5_d8rut")]
+[node name="Item18" parent="." index="23" instance=ExtResource("5_d8rut")]
 position = Vector2(101, 34)
 
-[node name="spikes" parent="." index="18" instance=ExtResource("10_t18f7")]
+[node name="spikes" parent="." index="24" instance=ExtResource("10_t18f7")]
 position = Vector2(792, 464)
 
-[node name="spikes2" parent="." index="19" instance=ExtResource("10_t18f7")]
+[node name="spikes2" parent="." index="25" instance=ExtResource("10_t18f7")]
 position = Vector2(196, 390)
 
-[node name="spikes3" parent="." index="20" instance=ExtResource("10_t18f7")]
+[node name="spikes3" parent="." index="26" instance=ExtResource("10_t18f7")]
 position = Vector2(1136, 616)
 
-[node name="spikes4" parent="." index="21" instance=ExtResource("10_t18f7")]
+[node name="spikes4" parent="." index="27" instance=ExtResource("10_t18f7")]
 position = Vector2(988, 462)
 
-[node name="spikes5" parent="." index="22" instance=ExtResource("10_t18f7")]
+[node name="spikes5" parent="." index="28" instance=ExtResource("10_t18f7")]
 position = Vector2(728, 320)
 
-[node name="spikes6" parent="." index="23" instance=ExtResource("10_t18f7")]
+[node name="spikes6" parent="." index="29" instance=ExtResource("10_t18f7")]
 position = Vector2(248, 272)
 rotation = 1.5708
 
-[node name="spikes7" parent="." index="24" instance=ExtResource("10_t18f7")]
+[node name="spikes7" parent="." index="30" instance=ExtResource("10_t18f7")]
 position = Vector2(12, 294)
 
-[node name="spikes8" parent="." index="25" instance=ExtResource("10_t18f7")]
+[node name="spikes8" parent="." index="31" instance=ExtResource("10_t18f7")]
 position = Vector2(84, 654)
 
-[node name="spikes9" parent="." index="26" instance=ExtResource("10_t18f7")]
+[node name="spikes9" parent="." index="32" instance=ExtResource("10_t18f7")]
 position = Vector2(212, 102)
 
-[node name="spikes10" parent="." index="27" instance=ExtResource("10_t18f7")]
+[node name="spikes10" parent="." index="33" instance=ExtResource("10_t18f7")]
 position = Vector2(792, 392)
 rotation = 3.14159
 
-[node name="spikes11" parent="." index="28" instance=ExtResource("10_t18f7")]
+[node name="spikes11" parent="." index="34" instance=ExtResource("10_t18f7")]
 position = Vector2(56, 544)
 rotation = -3.14159
 
-[node name="spikes12" parent="." index="29" instance=ExtResource("10_t18f7")]
+[node name="spikes12" parent="." index="35" instance=ExtResource("10_t18f7")]
 position = Vector2(312, 464)
 rotation = 1.5708
 
-[node name="spikes13" parent="." index="30" instance=ExtResource("10_t18f7")]
+[node name="spikes13" parent="." index="36" instance=ExtResource("10_t18f7")]
 position = Vector2(832, 568)
 rotation = 1.5708
 
-[node name="spikes14" parent="." index="31" instance=ExtResource("10_t18f7")]
+[node name="spikes14" parent="." index="37" instance=ExtResource("10_t18f7")]
 position = Vector2(984, 592)
 rotation = 3.14159
 
-[node name="spikes15" parent="." index="32" instance=ExtResource("10_t18f7")]
+[node name="spikes15" parent="." index="38" instance=ExtResource("10_t18f7")]
 position = Vector2(552, 400)
 rotation = 4.71239
 
-[node name="spikes17" parent="." index="33" instance=ExtResource("10_t18f7")]
+[node name="spikes17" parent="." index="39" instance=ExtResource("10_t18f7")]
 position = Vector2(1136, 200)
 rotation = -1.5708
 
-[node name="spikes18" parent="." index="34" instance=ExtResource("10_t18f7")]
+[node name="spikes18" parent="." index="40" instance=ExtResource("10_t18f7")]
 position = Vector2(1104, 344)
 rotation = -3.14159
 
-[node name="spikes19" parent="." index="35" instance=ExtResource("10_t18f7")]
+[node name="spikes19" parent="." index="41" instance=ExtResource("10_t18f7")]
 position = Vector2(1168, 104)
 rotation = -3.14159
 
-[node name="spikes20" parent="." index="36" instance=ExtResource("10_t18f7")]
+[node name="spikes20" parent="." index="42" instance=ExtResource("10_t18f7")]
 position = Vector2(944, 104)
 rotation = -1.5708
 
-[node name="AudioStreamPlayer" parent="." index="37" instance=ExtResource("8_0w76l")]
+[node name="AudioStreamPlayer" parent="." index="43" instance=ExtResource("8_0w76l")]
 
-[node name="GUI_IN_GAME" parent="." index="38" instance=ExtResource("8_sl3xa")]
-
-[node name="bats" parent="." index="39" instance=ExtResource("9_4xr33")]
-position = Vector2(432, 232)
-
-[node name="bats4" parent="." index="40" instance=ExtResource("9_4xr33")]
-position = Vector2(32, 40)
-
-[node name="bats2" parent="." index="41" instance=ExtResource("9_4xr33")]
-position = Vector2(1016, 72)
-
-[node name="bats3" parent="." index="42" instance=ExtResource("9_4xr33")]
-position = Vector2(288, 432)
-
-[node name="bats5" parent="." index="43" instance=ExtResource("9_4xr33")]
-position = Vector2(1152, 416)
-
-[node name="bats6" parent="." index="44" instance=ExtResource("9_4xr33")]
-position = Vector2(768, 272)
+[node name="GUI_IN_GAME" parent="." index="44" instance=ExtResource("8_sl3xa")]
 
 [node name="door" parent="." index="45" instance=ExtResource("11_825b8")]
 position = Vector2(29, 642)
