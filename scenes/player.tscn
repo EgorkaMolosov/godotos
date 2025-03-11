@@ -319,6 +319,7 @@ position = Vector2(-0.5, 4.5)
 shape = SubResource("RectangleShape2D_ujh7x")
 
 [node name="Pickup_Area" parent="." instance=ExtResource("3_nmvog")]
+monitoring = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visibility_layer = 8

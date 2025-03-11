@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://f2vkoa4dmsbf"]
+[gd_scene load_steps=10 format=3 uid="uid://f2vkoa4dmsbf"]
 
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="1_7q6k6"]
 [ext_resource type="PackedScene" uid="uid://b1eb7x7eqi65f" path="res://scenes/gui_in_game.tscn" id="2_fcxc2"]
@@ -8,6 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://cp0iu1sqxyqkt" path="res://scenes/enemy.tscn" id="6_s7eij"]
 [ext_resource type="PackedScene" uid="uid://bkehst4np6jr0" path="res://scenes/item.tscn" id="7_bct0p"]
 [ext_resource type="PackedScene" uid="uid://boj5trnp52f1m" path="res://scenes/music_level.tscn" id="8_r840q"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_abx7k"]
+vertices = PackedVector2Array(881.898, -143.109, 330.047, -122.672, 342.109, -142.773, 671.609, -189.844)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(336, -152, 672, -200, 960, -136, 312, -112)])
 
 [node name="level_4" type="Node2D"]
 
@@ -93,3 +98,6 @@ position = Vector2(720, 88)
 position = Vector2(512, 416)
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("8_r840q")]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_abx7k")

@@ -1,0 +1,112 @@
+[gd_scene load_steps=7 format=3 uid="uid://crre8hjlj11c8"]
+
+[ext_resource type="Texture2D" uid="uid://b2iey2vu4wqc7" path="res://Sprites/column.png" id="1_isgut"]
+[ext_resource type="PackedScene" uid="uid://cp0iu1sqxyqkt" path="res://scenes/enemy.tscn" id="2_2g6d0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8worm"]
+size = Vector2(64, 544)
+
+[sub_resource type="Animation" id="Animation_kw6av"]
+resource_name = "up_down"
+length = 2.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1.68179),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 80)]
+}
+
+[sub_resource type="Animation" id="Animation_r5ng3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j1xm5"]
+_data = {
+"RESET": SubResource("Animation_r5ng3"),
+"up_down": SubResource("Animation_kw6av")
+}
+
+[node name="up_down_columns" type="Node2D"]
+
+[node name="column1" type="AnimatableBody2D" parent="."]
+position = Vector2(120, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="column1"]
+shape = SubResource("RectangleShape2D_8worm")
+
+[node name="Sprite2D" type="Sprite2D" parent="column1"]
+position = Vector2(0, -48)
+texture = ExtResource("1_isgut")
+
+[node name="spikes" parent="column1" instance=ExtResource("2_2g6d0")]
+position = Vector2(0, 276.019)
+rotation = -3.14159
+
+[node name="column2" type="AnimatableBody2D" parent="."]
+position = Vector2(120, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="column2"]
+position = Vector2(288, 96)
+shape = SubResource("RectangleShape2D_8worm")
+
+[node name="Sprite2D" type="Sprite2D" parent="column2"]
+position = Vector2(288, 48)
+texture = ExtResource("1_isgut")
+
+[node name="spikes" parent="column2" instance=ExtResource("2_2g6d0")]
+position = Vector2(288, 372.019)
+rotation = -3.14159
+
+[node name="column3" type="AnimatableBody2D" parent="."]
+position = Vector2(120, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="column3"]
+position = Vector2(576, 144)
+shape = SubResource("RectangleShape2D_8worm")
+
+[node name="Sprite2D" type="Sprite2D" parent="column3"]
+position = Vector2(576, 96)
+texture = ExtResource("1_isgut")
+
+[node name="spikes" parent="column3" instance=ExtResource("2_2g6d0")]
+position = Vector2(576, 420.019)
+rotation = -3.14159
+
+[node name="column4" type="AnimatableBody2D" parent="."]
+position = Vector2(120, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="column4"]
+position = Vector2(864, 48)
+shape = SubResource("RectangleShape2D_8worm")
+
+[node name="Sprite2D" type="Sprite2D" parent="column4"]
+position = Vector2(864, 0)
+texture = ExtResource("1_isgut")
+
+[node name="spikes" parent="column4" instance=ExtResource("2_2g6d0")]
+position = Vector2(864, 324.019)
+rotation = -3.14159
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j1xm5")
+}
+autoplay = "up_down"
