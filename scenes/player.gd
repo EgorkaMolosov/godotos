@@ -11,6 +11,7 @@ var score = 0
 @onready var count = get_parent().get_node('GUI_IN_GAME/Label')
 @onready var door = get_parent().get_node('door')
 @onready var parallax = get_parent().get_node('ParallaxBackground')
+@onready var navigation = get_parent().get_node('NavigationRegion2D')
 var level_file = null
 var is_dead = false
 
@@ -21,6 +22,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if score == 13:
 		door._open()
+	navigation.bake_navigation_polygon()
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

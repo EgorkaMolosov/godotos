@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqgrltkmiymen"]
+[gd_scene load_steps=11 format=3 uid="uid://cqgrltkmiymen"]
 
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="1_5nejo"]
+[ext_resource type="NavigationPolygon" uid="uid://bttl456eat3cd" path="res://scenes/node.tres" id="2_0nlu3"]
 [ext_resource type="PackedScene" uid="uid://cl6xvn3n8fv36" path="res://scenes/tile_map.tscn" id="2_temhy"]
 [ext_resource type="PackedScene" uid="uid://d0n3s3s3f6by4" path="res://scenes/player.tscn" id="3_qrio7"]
 [ext_resource type="PackedScene" uid="uid://bkehst4np6jr0" path="res://scenes/item.tscn" id="4_0v83d"]
@@ -14,8 +15,26 @@
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("1_5nejo")]
 
-[node name="TileMap" parent="." instance=ExtResource("2_temhy")]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = ExtResource("2_0nlu3")
+
+[node name="TileMap" parent="NavigationRegion2D" instance=ExtResource("2_temhy")]
 layer_0/tile_data = PackedInt32Array(393216, 196611, 0, 655363, 393219, 0, 655376, 196611, 3, 917518, 196611, 0, 720899, 1966084, 6, 917504, 131077, 0, 589847, 4, 0, 589848, 1179652, 6, 655383, 786436, 6, 458778, 4, 0, 851989, 786436, 0, 851990, 786436, 0, 851991, 786436, 6, 786455, 786436, 6, 786454, 1179652, 6, 917526, 786436, 0, 917527, 786436, 6, 851994, 4, 0, 851968, 589827, 0, 917525, 786436, 6, 786453, 1179652, 6, 786452, 4, 0, 851988, 3, 3, 917528, 1179652, 6, 720919, 786435, 6, 917529, 1179652, 6, 917530, 1179652, 6, 655366, 1966084, 6, 196610, 1966084, 6, 131098, 3, 7, 917517, 3, 0, 327692, 196611, 7, 327691, 393219, 7, 917510, 786436, 6, 851974, 786436, 6, 786438, 786436, 6, 720902, 786436, 6, 720901, 1179652, 6, 720900, 1179652, 6, 458752, 196611, 3, 524314, 1179652, 6, 589849, 1179652, 6, 589850, 1179652, 6, 983044, 393219, 0, 983045, 589827, 0, 983042, 393219, 0, 983043, 589827, 0, 655375, 3, 3, 589840, 131077, 0, 589839, 4, 0, 196627, 1966084, 6, 196618, 196611, 7, 196617, 3, 7, 655364, 589827, 0, 589838, 3, 7, 458772, 589827, 3, 458771, 393219, 3, 393236, 589827, 0, 393235, 393219, 0, 589834, 196611, 7, 589833, 3, 7, 393223, 589827, 7, 393222, 393219, 7, 327704, 196611, 7, 327703, 3, 7, 851985, 196611, 7, 851984, 393219, 7, 786443, 196611, 7, 786442, 393219, 7, 262159, 3, 7, 262160, 589827, 7, 131085, 1966084, 6, 131078, 393219, 0, 196614, 393219, 3, 131079, 196611, 0, 196615, 1966084, 6, 65558, 3, 0, 65559, 196611, 0, 131094, 3, 3, 131095, 1966084, 6, 458753, 393219, 7, 458754, 196611, 7, -458753, 2, 0, -393217, 2, 0, -327681, 2, 0, -262145, 2, 0, -196609, 2, 0, -131073, 2, 0, -65537, 2, 0, -1, 2, 0, 65535, 2, 0, 131071, 2, 0, 196607, 2, 0, 262143, 2, 0, 327679, 2, 0, 393215, 2, 0, 458751, 2, 0, 524287, 2, 0, 589823, 2, 0, 655359, 2, 0, 720895, 2, 0, 786431, 2, 0, 851967, 2, 0, 917503, 2, 0, 983039, 2, 0, 1048575, 2, 0, 1114111, 2, 0, 1179647, 2, 0, 1245183, 2, 0, 1310719, 2, 0, 1376255, 2, 0, 1441791, 2, 0, 1507327, 2, 0, 1572863, 2, 0, 1638399, 2, 0, 1703935, 2, 0, -524261, 2, 0, -458725, 2, 0, -393189, 2, 0, -327653, 2, 0, -262117, 2, 0, -196581, 2, 0, -131045, 2, 0, -65509, 2, 0, 27, 2, 0, 65563, 2, 0, 131099, 2, 0, 196635, 2, 0, 262171, 2, 0, 327707, 2, 0, 393243, 2, 0, 458779, 2, 0, 524315, 2, 0, 589851, 2, 0, 655387, 2, 0, 720923, 2, 0, 786459, 2, 0, 851995, 2, 0, 917531, 2, 0, 983067, 2, 0, 1048603, 2, 0, 1114139, 2, 0, 1179675, 2, 0, 1245211, 2, 0, 1310747, 2, 0, 1376283, 2, 0, 1441819, 2, 0, 1507355, 2, 0, 1572891, 2, 0, 1638427, 2, 0, 1703963, 2, 0, 524313, 4, 0, 262170, 1179652, 6, 262169, 1966084, 6, 983060, 393219, 0, 983058, 393219, 0, 983059, 589827, 0)
+
+[node name="bats" parent="NavigationRegion2D" instance=ExtResource("8_fj8yh")]
+position = Vector2(112, 328)
+
+[node name="bats2" parent="NavigationRegion2D" instance=ExtResource("8_fj8yh")]
+position = Vector2(352, 80)
+
+[node name="bats3" parent="NavigationRegion2D" instance=ExtResource("8_fj8yh")]
+position = Vector2(992, 552)
+
+[node name="bats4" parent="NavigationRegion2D" instance=ExtResource("8_fj8yh")]
+position = Vector2(1120, 248)
+
+[node name="bats5" parent="NavigationRegion2D" instance=ExtResource("8_fj8yh")]
+position = Vector2(640, 656)
 
 [node name="player" parent="." instance=ExtResource("3_qrio7")]
 position = Vector2(592, 232)
@@ -104,21 +123,6 @@ position = Vector2(240, 688)
 
 [node name="Item14" parent="." instance=ExtResource("4_0v83d")]
 position = Vector2(1237, 274)
-
-[node name="bats" parent="." instance=ExtResource("8_fj8yh")]
-position = Vector2(112, 328)
-
-[node name="bats2" parent="." instance=ExtResource("8_fj8yh")]
-position = Vector2(352, 80)
-
-[node name="bats3" parent="." instance=ExtResource("8_fj8yh")]
-position = Vector2(992, 552)
-
-[node name="bats4" parent="." instance=ExtResource("8_fj8yh")]
-position = Vector2(1120, 248)
-
-[node name="bats5" parent="." instance=ExtResource("8_fj8yh")]
-position = Vector2(640, 656)
 
 [node name="door" parent="." instance=ExtResource("9_4cyuu")]
 position = Vector2(928, 704)

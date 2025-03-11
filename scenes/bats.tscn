@@ -39,4 +39,9 @@ autoplay = "default"
 shape = SubResource("RectangleShape2D_xj7i5")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_desired_distance = 28.07
+path_desired_distance = 159.97
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+vertices = PackedVector2Array(-15, 7, 16, 7, 16, -7, -15, -7)
+affect_navigation_mesh = true
+carve_navigation_mesh = true

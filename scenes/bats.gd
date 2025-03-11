@@ -2,12 +2,12 @@ extends CharacterBody2D
 
 const SPEED = 99
 @onready var animated_bich = $AnimatedSprite2D
-@onready var player = get_parent().get_node("player")
+@onready var player = get_parent().get_parent().get_node("player")
 @onready var navigation_agent = $NavigationAgent2D
 
 # Called when the node enter"res://scenes/bats.gd"s the scene tree for the first time.
 func _ready():
-	pass
+	navigation_agent.set_avoidance_priority(5.00)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
