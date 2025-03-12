@@ -23,10 +23,10 @@ func _ready() -> void:
 	old_pos2 = column2.position.y
 	old_pos3 = column3.position.y
 	old_pos4 = column4.position.y
-	new_pos1 = column1.position.y + 60
-	new_pos2 = column2.position.y + 60
-	new_pos3 = column3.position.y + 60
-	new_pos4 = column4.position.y + 60
+	new_pos1 = column1.position.y + 80
+	new_pos2 = column2.position.y + 80
+	new_pos3 = column3.position.y + 80
+	new_pos4 = column4.position.y + 80
 	# Replace with function body.
 
 
@@ -36,19 +36,19 @@ func _process(delta: float) -> void:
 	column2.position.y = lerp(column2.position.y, new_pos2, delta*5)
 	column3.position.y = lerp(column3.position.y, new_pos3, delta*4)
 	column4.position.y = lerp(column4.position.y, new_pos4, delta*2.5)
-	if column1.position.y > old_pos1+59:
-		new_pos1 -= 60
-	if column2.position.y > old_pos2+59:
-		new_pos2 -= 60
-	if column3.position.y > old_pos3+59:
-		new_pos3 -= 60
-	if column4.position.y > old_pos4+59:
-		new_pos4 -= 60
-	if column1.position.y < old_pos1+1:
-		new_pos1 += 60
-	if column2.position.y < old_pos2+1:
-		new_pos2 += 60
-	if column3.position.y < old_pos3+1:
-		new_pos3 += 60
-	if column4.position.y < old_pos4+1:
-		new_pos4 += 60
+	if column1.position.y == old_pos1+80:
+		new_pos1 -= 80
+	if column2.position.y == old_pos2+80:
+		new_pos2 -= 80
+	if column3.position.y > old_pos3+80:
+		new_pos3 -= 80
+	if column4.position.y > old_pos4+80:
+		new_pos4 -= 80
+	if column1.position.y == old_pos1:
+		new_pos1 += 80
+	if column2.position.y == old_pos2:
+		new_pos2 += 80
+	if column3.position.y == old_pos3:
+		new_pos3 += 80
+	if column4.position.y == old_pos4:
+		new_pos4 += 80
