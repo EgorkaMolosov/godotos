@@ -91,10 +91,6 @@ rotation = 1.5708
 position = Vector2(360, 104)
 rotation = 3.14159
 
-[node name="spikes6" parent="." instance=ExtResource("8_rpkmc")]
-position = Vector2(736, 56)
-rotation = 1.5708
-
 [node name="spikes7" parent="." instance=ExtResource("8_rpkmc")]
 position = Vector2(744, 584)
 
