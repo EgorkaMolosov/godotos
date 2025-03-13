@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://d0n3s3s3f6by4"]
+[gd_scene load_steps=67 format=3 uid="uid://d0n3s3s3f6by4"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_ew2xb"]
 [ext_resource type="Texture2D" uid="uid://bacwxg7ixqiqr" path="res://animations/Appearing (96x96).png" id="3_dg6pa"]
@@ -9,6 +9,22 @@
 [ext_resource type="Texture2D" uid="uid://bvkkhpcwsxcqe" path="res://animations/run_right.png" id="6_uorty"]
 [ext_resource type="AudioStream" uid="uid://5jfi8i1esrcj" path="res://sound/Jump3.mp3" id="7_5l7mw"]
 [ext_resource type="AudioStream" uid="uid://br8l2k2opq5ss" path="res://sound/Hero_Dies.mp3" id="8_pn7ac"]
+[ext_resource type="Texture2D" uid="uid://cg3g04jv3tkrn" path="res://animations/wind/W401-1.png" id="10_dvh0v"]
+[ext_resource type="Texture2D" uid="uid://cm402ga246a5" path="res://animations/wind/W401-2.png" id="11_dqjfc"]
+[ext_resource type="Texture2D" uid="uid://bvnl0yox63dc7" path="res://animations/wind/W401-3.png" id="12_mjxv3"]
+[ext_resource type="Texture2D" uid="uid://cg55sv761hsgu" path="res://animations/wind/W401-4.png" id="13_8f31k"]
+[ext_resource type="Texture2D" uid="uid://brii3fyrogdv1" path="res://animations/wind/W401-5.png" id="14_fepy2"]
+[ext_resource type="Texture2D" uid="uid://bcp4yfnith1dx" path="res://animations/wind/W401-6.png" id="15_sriyr"]
+[ext_resource type="Texture2D" uid="uid://bcpfu7niecgyw" path="res://animations/wind/W401-7.png" id="16_nq0y7"]
+[ext_resource type="Texture2D" uid="uid://bm5a04h0wsjbd" path="res://animations/wind/W401-8.png" id="17_orcg2"]
+[ext_resource type="Texture2D" uid="uid://d30lacdd71enw" path="res://animations/wind/W401-9.png" id="18_tqau7"]
+[ext_resource type="Texture2D" uid="uid://8ybw2snvwbvm" path="res://animations/wind/W401-10.png" id="19_7h6ab"]
+[ext_resource type="Texture2D" uid="uid://c5dqi121w6i1o" path="res://animations/wind/W401-11.png" id="20_qv24m"]
+[ext_resource type="Texture2D" uid="uid://bqmlcg1baw07w" path="res://animations/wind/W401-12.png" id="21_5e6x1"]
+[ext_resource type="Texture2D" uid="uid://pl8wtitwlk7" path="res://animations/wind/W401-13.png" id="22_arplq"]
+[ext_resource type="Texture2D" uid="uid://do8544snjbvkc" path="res://animations/wind/W401-14.png" id="23_ch432"]
+[ext_resource type="Texture2D" uid="uid://qglh7t61yaiw" path="res://animations/wind/W401-15.png" id="24_jglab"]
+[ext_resource type="Texture2D" uid="uid://dv77vvknkter5" path="res://animations/wind/W401-16.png" id="25_iyvxo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ujh7x"]
 size = Vector2(29, 29)
@@ -307,6 +323,67 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_yanob"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_dvh0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dqjfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mjxv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8f31k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fepy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_sriyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nq0y7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_orcg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tqau7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7h6ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_qv24m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_5e6x1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_arplq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ch432")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_jglab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_iyvxo")
+}],
+"loop": true,
+"name": &"aura",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"none",
+"speed": 5.0
+}]
+
 [node name="player" type="CharacterBody2D"]
 visibility_layer = 8
 position = Vector2(27, 9)
@@ -341,6 +418,14 @@ pitch_scale = 1.09
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(-0.5, 5)
 scale = Vector2(1.45, 1.5)
+
+[node name="aura" type="AnimatedSprite2D" parent="."]
+z_index = 40
+position = Vector2(-3, 7)
+scale = Vector2(0.117798, 0.117798)
+sprite_frames = SubResource("SpriteFrames_yanob")
+animation = &"aura"
+autoplay = "aura"
 
 [connection signal="area_entered" from="Pickup_Area" to="." method="_on_pickup_area_entered"]
 [connection signal="body_entered" from="Pickup_Area" to="." method="_on_pickup_area_body_entered"]

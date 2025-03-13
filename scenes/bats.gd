@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 	pass
 	
 func _physics_process(delta):
-	navigation_agent.target_position = player.global_position
+	navigation_agent.target_position = Vector2(player.global_position.x,player.global_position.y-10)
 	velocity = global_position.direction_to(navigation_agent.get_next_path_position()) * SPEED
 	move_and_slide()
 	handle_movement_animation()

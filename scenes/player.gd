@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var death_sound =$death_sound
 @onready var jump_sound = $jump_sound
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var aura = $aura
 var SPEED = 300.0
 var JUMP_VELOCITY = -300.0
 var score = 0
@@ -23,6 +24,10 @@ func _process(delta: float) -> void:
 	if score == 13:
 		door._open()
 	navigation.bake_navigation_polygon()
+	if SPEED == 200.0:
+		aura.visible =false
+	else:
+		aura.visible = true
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -110,7 +115,7 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 
 func _on_pickup_area_body_entered(body: Node2D) -> void:
 	if body.has_method("_shit_process"):
-		if position.y - body.position.y < -1:
+		if position.y - body.position.y < -3:
 			body.queue_free()
 		else:
 			on_death()# Replace with function body.
