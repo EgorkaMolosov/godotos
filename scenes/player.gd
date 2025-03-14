@@ -19,7 +19,7 @@ var is_dead = false
 func _ready() -> void:
 	level_file = get_parent().scene_file_path
 	parallax.set_scroll_offset(GlobalInfo.parallax)
-	
+
 func _process(delta: float) -> void:
 	if score == 13:
 		door._open()

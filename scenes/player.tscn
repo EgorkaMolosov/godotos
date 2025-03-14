@@ -426,6 +426,7 @@ scale = Vector2(0.117798, 0.117798)
 sprite_frames = SubResource("SpriteFrames_yanob")
 animation = &"aura"
 autoplay = "aura"
+frame_progress = 0.645751
 
 [connection signal="area_entered" from="Pickup_Area" to="." method="_on_pickup_area_entered"]
 [connection signal="body_entered" from="Pickup_Area" to="." method="_on_pickup_area_body_entered"]
