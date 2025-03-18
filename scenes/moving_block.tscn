@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlpi7yhkth12d"]
+[gd_scene load_steps=8 format=3 uid="uid://dlpi7yhkth12d"]
 
 [ext_resource type="Texture2D" uid="uid://dyg35566lxn05" path="res://Sprites/moving_block.png" id="1_liv1q"]
+[ext_resource type="PackedScene" uid="uid://et84lyikqsxa" path="res://scenes/honey.tscn" id="2_vac7t"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qgw7w"]
 
@@ -60,3 +61,7 @@ libraries = {
 "": SubResource("AnimationLibrary_eomdd")
 }
 autoplay = "move"
+
+[node name="honey" parent="." instance=ExtResource("2_vac7t")]
+position = Vector2(24, 18)
+rotation = 3.14159
