@@ -1,8 +1,4 @@
 extends Area2D
-var body_in = false
-@onready var body = get_parent().get_parent().get_node('player')
-var old_SPEED = null
-var old_JUMP_VELOCITY = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

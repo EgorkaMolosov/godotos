@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://crre8hjlj11c8"]
+[gd_scene load_steps=6 format=3 uid="uid://crre8hjlj11c8"]
 
 [ext_resource type="Texture2D" uid="uid://b2iey2vu4wqc7" path="res://Sprites/column.png" id="1_isgut"]
 [ext_resource type="Script" path="res://scenes/up_down_columns.gd" id="1_wuowy"]
 [ext_resource type="PackedScene" uid="uid://cp0iu1sqxyqkt" path="res://scenes/enemy.tscn" id="2_2g6d0"]
+[ext_resource type="PackedScene" uid="uid://et84lyikqsxa" path="res://scenes/honey.tscn" id="4_xixj5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8worm"]
 size = Vector2(64, 544)
@@ -24,6 +25,10 @@ texture = ExtResource("1_isgut")
 position = Vector2(0, 276.019)
 rotation = -3.14159
 
+[node name="honey" parent="column1" instance=ExtResource("4_xixj5")]
+position = Vector2(32, 32)
+rotation = 1.5708
+
 [node name="column2" type="AnimatableBody2D" parent="."]
 position = Vector2(120, 24)
 
@@ -39,6 +44,10 @@ texture = ExtResource("1_isgut")
 position = Vector2(288, 372.019)
 rotation = -3.14159
 
+[node name="honey" parent="column2" instance=ExtResource("4_xixj5")]
+position = Vector2(256, 336)
+rotation = -1.5708
+
 [node name="column3" type="AnimatableBody2D" parent="."]
 position = Vector2(120, 24)
 
@@ -53,6 +62,10 @@ texture = ExtResource("1_isgut")
 [node name="spikes" parent="column3" instance=ExtResource("2_2g6d0")]
 position = Vector2(576, 420.019)
 rotation = -3.14159
+
+[node name="honey" parent="column3" instance=ExtResource("4_xixj5")]
+position = Vector2(608, 200)
+rotation = 1.5708
 
 [node name="column4" type="AnimatableBody2D" parent="."]
 position = Vector2(120, 24)

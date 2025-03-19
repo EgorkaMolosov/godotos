@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8vdv271q65yw"]
+[gd_scene load_steps=7 format=3 uid="uid://c8vdv271q65yw"]
 
 [ext_resource type="Texture2D" uid="uid://cj5clwia3xeob" path="res://Sprites/moving_plank.png" id="1_gih3l"]
+[ext_resource type="PackedScene" uid="uid://et84lyikqsxa" path="res://scenes/honey.tscn" id="2_42kjf"]
 
 [sub_resource type="Animation" id="Animation_jq1xi"]
 length = 0.001
@@ -61,3 +62,6 @@ shape = SubResource("RectangleShape2D_ldxcm")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-56, 0)
 texture = ExtResource("1_gih3l")
+
+[node name="honey" parent="." instance=ExtResource("2_42kjf")]
+position = Vector2(-104, -7.99973)

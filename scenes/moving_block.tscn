@@ -63,5 +63,5 @@ libraries = {
 autoplay = "move"
 
 [node name="honey" parent="." instance=ExtResource("2_vac7t")]
-position = Vector2(56, 96)
+position = Vector2(24, 16)
 rotation = 3.14159

@@ -8,6 +8,7 @@ extends CharacterBody2D
 @onready var aura = $aura
 var SPEED = 300.0
 var JUMP_VELOCITY = -300.0
+var gravity = 980
 var score = 0
 @onready var count = get_parent().get_node('GUI_IN_GAME/Label')
 @onready var door = get_parent().get_node('door')
@@ -31,12 +32,12 @@ func _process(delta: float) -> void:
 	else:
 		aura.visible = true
 	if in_honey:
-		self.position = self.position.lerp(GlobalInfo.honey.position,delta*10)
+		self.position = self.position.lerp(GlobalInfo.honey.global_position,delta*10)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity.y += gravity * delta
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		jump_sound.play()
@@ -75,8 +76,14 @@ func _on_pickup_area_entered(area: Area2D):
 	elif area.has_method('_honey'):
 		in_honey = true
 		area._honey()
+		gravity = 0
 	else:
 		on_death()
+
+func _on_pickup_area_area_exited(area: Area2D) -> void:
+	if area.has_method('_honey'):
+		in_honey = false
+		gravity = 980
 
 func _dmg_spikes_method(area: Area2D) -> void:
 	if area.has_method("_on_area_entered"):
@@ -94,7 +101,7 @@ func handle_movement_animation(direction):
 	if velocity.x and !velocity.y:
 		animated_sprite.play("run")
 		toggle_flip_sprite(direction)
-	if velocity.y:
+	if not is_on_floor():
 		animated_sprite.play("jump")
 		toggle_flip_sprite(direction)
 
