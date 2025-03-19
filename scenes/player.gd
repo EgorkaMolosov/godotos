@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 	else:
 		aura.visible = true
 	if in_honey:
-		position = position.lerp(honey.position,delta*0.3)
+		self.position = self.position.lerp(GlobalInfo.honey.position,delta*10)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -74,7 +74,7 @@ func _on_pickup_area_entered(area: Area2D):
 			get_tree().change_scene_to_file('res://scenes/molodec.tscn')
 	elif area.has_method('_honey'):
 		in_honey = true
-		honey = area
+		area._honey()
 	else:
 		on_death()
 

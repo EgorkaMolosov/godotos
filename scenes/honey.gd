@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 	pass
 
 func _honey():
-	pass
+	GlobalInfo.honey = self

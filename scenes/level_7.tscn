@@ -119,3 +119,5 @@ position = Vector2(309, 450)
 
 [node name="Item8" parent="." instance=ExtResource("7_fl3n0")]
 position = Vector2(48, 40)
+
+[editable path="NavigationRegion2D/ParallaxBackground3"]
