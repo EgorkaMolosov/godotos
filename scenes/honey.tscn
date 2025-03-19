@@ -4,19 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://dy5wkckbi3q22" path="res://Sprites/honey.png" id="2_qct24"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f87j3"]
-size = Vector2(24, 8)
+size = Vector2(40, 16)
 
 [node name="honey" type="Area2D"]
-monitorable = false
 script = ExtResource("1_4mp08")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(13, 4)
 shape = SubResource("RectangleShape2D_f87j3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(13, 4)
+position = Vector2(0, 4)
 texture = ExtResource("2_qct24")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]

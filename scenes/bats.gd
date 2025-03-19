@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 99
+var SPEED = 99
 @onready var animated_bich = $AnimatedSprite2D
 @onready var player = get_parent().get_parent().get_node("player")
 @onready var navigation_agent = $NavigationAgent2D

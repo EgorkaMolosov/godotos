@@ -13,8 +13,10 @@ var score = 0
 @onready var door = get_parent().get_node('door')
 @onready var parallax = get_parent().get_node('ParallaxBackground')
 @onready var navigation = get_parent().get_node('NavigationRegion2D')
+@onready var honey = null
 var level_file = null
 var is_dead = false
+var in_honey = false
 
 func _ready() -> void:
 	level_file = get_parent().scene_file_path
@@ -28,6 +30,8 @@ func _process(delta: float) -> void:
 		aura.visible =false
 	else:
 		aura.visible = true
+	if in_honey:
+		position = position.lerp(honey.position,delta*0.3)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -68,6 +72,9 @@ func _on_pickup_area_entered(area: Area2D):
 	elif area.has_method('_open'):
 		if not area.is_in_group("ignored"):
 			get_tree().change_scene_to_file('res://scenes/molodec.tscn')
+	elif area.has_method('_honey'):
+		in_honey = true
+		honey = area
 	else:
 		on_death()
 
