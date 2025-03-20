@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cpar65rhq588n"]
+[gd_scene load_steps=12 format=3 uid="uid://cpar65rhq588n"]
 
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="1_l56cy"]
 [ext_resource type="PackedScene" uid="uid://cl6xvn3n8fv36" path="res://scenes/tile_map.tscn" id="2_ro0io"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bkehst4np6jr0" path="res://scenes/item.tscn" id="7_qy50j"]
 [ext_resource type="PackedScene" uid="uid://b1eb7x7eqi65f" path="res://scenes/gui_in_game.tscn" id="8_pd23o"]
 [ext_resource type="PackedScene" uid="uid://c6qjwb7tev40b" path="res://scenes/flying_block.tscn" id="9_p3q6q"]
+[ext_resource type="PackedScene" uid="uid://sg7h73e5onaa" path="res://scenes/flying_block_apto.tscn" id="10_v37yj"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_kcpcd"]
 vertices = PackedVector2Array(869.75, -183.813, 421.102, -171.844, 624.492, -237.648)
@@ -139,9 +140,6 @@ position = Vector2(216, 384)
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_kcpcd")
 
-[node name="flying_block" parent="." instance=ExtResource("9_p3q6q")]
-position = Vector2(792, 504)
-
 [node name="flying_block2" parent="." instance=ExtResource("9_p3q6q")]
 position = Vector2(1080, 456)
 
@@ -151,17 +149,23 @@ position = Vector2(936, 264)
 [node name="flying_block4" parent="." instance=ExtResource("9_p3q6q")]
 position = Vector2(840, 72)
 
-[node name="flying_block5" parent="." instance=ExtResource("9_p3q6q")]
-position = Vector2(1176, 168)
-
 [node name="flying_block6" parent="." instance=ExtResource("9_p3q6q")]
 position = Vector2(648, 264)
-
-[node name="flying_block7" parent="." instance=ExtResource("9_p3q6q")]
-position = Vector2(408, 120)
 
 [node name="flying_block8" parent="." instance=ExtResource("9_p3q6q")]
 position = Vector2(216, 216)
 
-[node name="flying_block9" parent="." instance=ExtResource("9_p3q6q")]
+[node name="flying_block9" parent="." instance=ExtResource("10_v37yj")]
 position = Vector2(168, 456)
+
+[node name="flying_block7" parent="." instance=ExtResource("10_v37yj")]
+position = Vector2(408, 120)
+
+[node name="flying_block" parent="." instance=ExtResource("10_v37yj")]
+position = Vector2(792, 504)
+
+[node name="flying_block5" parent="." instance=ExtResource("10_v37yj")]
+position = Vector2(1176, 176)
+
+[editable path="flying_block2"]
+[editable path="flying_block4"]
