@@ -51,32 +51,40 @@ func _on_button_change_level_mouse_exited() -> void:
 
 func _on_button_first_pressed() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()
-	get_tree().change_scene_to_file("res://scenes/node.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/node.tscn")
+	GlobalInfo.started = false # Replace with function body.
 
 func _on_button_second_pressed() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()
-	get_tree().change_scene_to_file("res://scenes/level_2.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/level_2.tscn")
+	GlobalInfo.started = false # Replace with function body.
 
 func _on_button_third_pressed() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()
-	get_tree().change_scene_to_file("res://scenes/level_3.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/level_3.tscn")
+	GlobalInfo.started = false # Replace with function body.
 
 func _on_button_fourth_pressed() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()
-	get_tree().change_scene_to_file("res://scenes/level_4.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/level_4.tscn")
+	GlobalInfo.started = false # Replace with function body.
 
 func _on_button_fifth_pressed() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()
-	get_tree().change_scene_to_file("res://scenes/level_5.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/level_5.tscn")
+	GlobalInfo.started = false # Replace with function body.
 
 func _on_button_sixth_pressed() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()
-	get_tree().change_scene_to_file("res://scenes/level_6.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/level_6.tscn")
+	GlobalInfo.started = false # Replace with function body.
 
 func _on_button_seventh_pressed() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()
-	get_tree().change_scene_to_file("res://scenes/level_7.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/level_7.tscn")
+	GlobalInfo.started = false # Replace with function body.
 
 func _on_button_eight_pressed() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()
-	get_tree().change_scene_to_file("res://scenes/level_8.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/level_8.tscn")
+	GlobalInfo.started = false # Replace with function body.

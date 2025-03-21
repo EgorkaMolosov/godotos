@@ -2,6 +2,7 @@ extends Node
 var prev_level = null
 var parallax = null
 var honey = null
+var started = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

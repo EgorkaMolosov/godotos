@@ -102,6 +102,3 @@ navigation_polygon = SubResource("NavigationPolygon_61uiu")
 
 [node name="honey" parent="." instance=ExtResource("10_phrmu")]
 position = Vector2(696, 520)
-
-[node name="honey2" parent="." instance=ExtResource("10_phrmu")]
-position = Vector2(984, 424)

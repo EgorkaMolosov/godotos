@@ -24,7 +24,8 @@ func _on_button_pressed() -> void:
 
 func _on_replay_pressed() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()
-	get_tree().change_scene_to_file(GlobalInfo.prev_level) # Replace with function body.
+	get_tree().change_scene_to_file(GlobalInfo.prev_level)
+	GlobalInfo.started = false # Replace with function body.
 
 
 func _on_menu_mouse_entered() -> void:

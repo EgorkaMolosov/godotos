@@ -14,7 +14,7 @@ var score = 0
 @onready var door = get_parent().get_node('door')
 @onready var parallax = get_parent().get_node('ParallaxBackground')
 @onready var navigation = get_parent().get_node('NavigationRegion2D')
-@onready var honey = null
+@onready var gui = get_parent().get_node('GUI_IN_GAME')
 var level_file = null
 var is_dead = false
 var in_honey = false
@@ -24,6 +24,9 @@ func _ready() -> void:
 	parallax.set_scroll_offset(GlobalInfo.parallax)
 
 func _process(delta: float) -> void:
+	if GlobalInfo.started == false:
+		gui._on_retry_pressed()
+		GlobalInfo.started = true
 	if score == 13:
 		door._open()
 	navigation.bake_navigation_polygon()
