@@ -26,47 +26,18 @@ layer_0/tile_data = PackedInt32Array(589824, 786436, 6, 393216, 786436, 6, 39322
 [node name="spikes2" parent="." instance=ExtResource("3_7avch")]
 position = Vector2(504, 608)
 
-[node name="spikes3" parent="." instance=ExtResource("3_7avch")]
-position = Vector2(1160, 128)
-
 [node name="spikes4" parent="." instance=ExtResource("3_7avch")]
-position = Vector2(840, 112)
+position = Vector2(1048, 16)
 rotation = 3.14159
-
-[node name="spikes6" parent="." instance=ExtResource("3_7avch")]
-position = Vector2(200, 176)
-
-[node name="spikes7" parent="." instance=ExtResource("3_7avch")]
-position = Vector2(176, 416)
-
-[node name="spikes8" parent="." instance=ExtResource("3_7avch")]
-position = Vector2(448, 224)
-
-[node name="spikes9" parent="." instance=ExtResource("3_7avch")]
-position = Vector2(1096, 416)
 
 [node name="spikes11" parent="." instance=ExtResource("3_7avch")]
 position = Vector2(408, 280)
-
-[node name="spikes12" parent="." instance=ExtResource("3_7avch")]
-position = Vector2(936, 224)
-
-[node name="spikes13" parent="." instance=ExtResource("3_7avch")]
-position = Vector2(648, 224)
 
 [node name="spikes14" parent="." instance=ExtResource("3_7avch")]
 position = Vector2(792, 608)
 
 [node name="spikes15" parent="." instance=ExtResource("3_7avch")]
 position = Vector2(1080, 608)
-
-[node name="spikes16" parent="." instance=ExtResource("3_7avch")]
-position = Vector2(128, 456)
-rotation = 4.71239
-
-[node name="spikes17" parent="." instance=ExtResource("3_7avch")]
-position = Vector2(368, 120)
-rotation = 4.71239
 
 [node name="spikes18" parent="." instance=ExtResource("3_7avch")]
 position = Vector2(456, 448)
@@ -84,10 +55,6 @@ rotation = 1.5708
 position = Vector2(496, 248)
 rotation = 1.5708
 
-[node name="spikes23" parent="." instance=ExtResource("3_7avch")]
-position = Vector2(896, 272)
-rotation = 4.71239
-
 [node name="player" parent="." instance=ExtResource("4_pxfhd")]
 position = Vector2(648, 584)
 
@@ -100,22 +67,22 @@ position = Vector2(933, 594)
 position = Vector2(1232, 264)
 
 [node name="Item3" parent="." instance=ExtResource("7_qy50j")]
-position = Vector2(408, 256)
+position = Vector2(520, 368)
 
 [node name="Item4" parent="." instance=ExtResource("7_qy50j")]
-position = Vector2(1072, 352)
+position = Vector2(1040, 384)
 
 [node name="Item5" parent="." instance=ExtResource("7_qy50j")]
 position = Vector2(800, 432)
 
 [node name="Item6" parent="." instance=ExtResource("7_qy50j")]
-position = Vector2(840, 168)
+position = Vector2(832, 144)
 
 [node name="Item7" parent="." instance=ExtResource("7_qy50j")]
-position = Vector2(408, 64)
+position = Vector2(432, 64)
 
 [node name="Item8" parent="." instance=ExtResource("7_qy50j")]
-position = Vector2(80, 480)
+position = Vector2(80, 544)
 
 [node name="Item9" parent="." instance=ExtResource("7_qy50j")]
 position = Vector2(1216, 464)
@@ -124,18 +91,18 @@ position = Vector2(1216, 464)
 position = Vector2(552, 176)
 
 [node name="Item11" parent="." instance=ExtResource("7_qy50j")]
-position = Vector2(232, 160)
+position = Vector2(248, 160)
 
 [node name="Item12" parent="." instance=ExtResource("7_qy50j")]
 position = Vector2(360, 592)
 
 [node name="Item13" parent="." instance=ExtResource("7_qy50j")]
-position = Vector2(1176, 104)
+position = Vector2(1184, 72)
 
 [node name="GUI_IN_GAME" parent="." instance=ExtResource("8_pd23o")]
 
 [node name="Item14" parent="." instance=ExtResource("7_qy50j")]
-position = Vector2(216, 384)
+position = Vector2(232, 344)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_kcpcd")
@@ -150,22 +117,20 @@ position = Vector2(936, 264)
 position = Vector2(840, 72)
 
 [node name="flying_block6" parent="." instance=ExtResource("9_p3q6q")]
-position = Vector2(648, 264)
+position = Vector2(640, 272)
 
 [node name="flying_block8" parent="." instance=ExtResource("9_p3q6q")]
 position = Vector2(216, 216)
 
-[node name="flying_block9" parent="." instance=ExtResource("10_v37yj")]
-position = Vector2(168, 456)
-
-[node name="flying_block7" parent="." instance=ExtResource("10_v37yj")]
-position = Vector2(408, 120)
-
-[node name="flying_block" parent="." instance=ExtResource("10_v37yj")]
-position = Vector2(792, 504)
-
 [node name="flying_block5" parent="." instance=ExtResource("10_v37yj")]
 position = Vector2(1176, 176)
 
-[editable path="flying_block2"]
-[editable path="flying_block4"]
+[node name="flying_block" parent="." instance=ExtResource("9_p3q6q")]
+position = Vector2(128, 72)
+
+[node name="flying_block7" parent="." instance=ExtResource("9_p3q6q")]
+position = Vector2(352, 504)
+
+[node name="spikes" parent="." instance=ExtResource("3_7avch")]
+position = Vector2(368, 16)
+rotation = 3.14159

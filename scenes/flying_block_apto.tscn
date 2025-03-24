@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://sg7h73e5onaa"]
+[gd_scene load_steps=4 format=3 uid="uid://sg7h73e5onaa"]
 
+[ext_resource type="Script" path="res://scenes/flying_block_apto.gd" id="1_ft6tc"]
 [ext_resource type="Texture2D" uid="uid://bvux02vx8bex4" path="res://Sprites/flying_block.png" id="1_u55sg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dk25"]
 size = Vector2(64, 64)
 
 [node name="flying_block" type="AnimatableBody2D"]
+script = ExtResource("1_ft6tc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(256, 0)
@@ -14,3 +16,8 @@ shape = SubResource("RectangleShape2D_2dk25")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(256, 0)
 texture = ExtResource("1_u55sg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.063
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

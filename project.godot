@@ -13,7 +13,7 @@ config_version=5
 config/name="Yabloki"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-run/max_fps=120
+run/max_fps=360
 boot_splash/bg_color=Color(0.180748, 0.236419, 0.295955, 1)
 config/icon="res://icon.svg"
 

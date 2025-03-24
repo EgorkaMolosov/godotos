@@ -16,3 +16,10 @@ shape = SubResource("RectangleShape2D_2dk25")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(256, 0)
 texture = ExtResource("1_tt6ow")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.063
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

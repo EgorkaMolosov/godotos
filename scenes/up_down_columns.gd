@@ -18,10 +18,10 @@ var down2 = false
 var down3 = false
 var down4 = false
 
-var speed1 = 14
-var speed2 = 20
-var speed3 = 16
-var speed4 = 10
+var speed1 = 7
+var speed2 = 10
+var speed3 = 8
+var speed4 = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
