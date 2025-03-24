@@ -6,10 +6,12 @@ extends CharacterBody2D
 @onready var jump_sound = $jump_sound
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var aura = $aura
+@onready var timer = $Timer
 var SPEED = 300.0
 var JUMP_VELOCITY = -300.0
 var gravity = 980
 var score = 0
+var time = 0.00
 @onready var count = get_parent().get_node('GUI_IN_GAME/Label')
 @onready var door = get_parent().get_node('door')
 @onready var parallax = get_parent().get_node('ParallaxBackground')
@@ -29,6 +31,9 @@ func _process(delta: float) -> void:
 		GlobalInfo.started = true
 	if score == 13:
 		door._open()
+		timer.stop()
+		time /= 100
+		
 	navigation.bake_navigation_polygon()
 	if SPEED == 200.0:
 		aura.visible =false
@@ -136,3 +141,7 @@ func _on_pickup_area_body_entered(body: Node2D) -> void:
 			body.queue_free()
 		else:
 			on_death()# Replace with function body.
+
+
+func _on_timer_timeout() -> void:
+	time += 1 # Replace with function body.
