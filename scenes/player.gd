@@ -31,9 +31,6 @@ func _process(delta: float) -> void:
 		GlobalInfo.started = true
 	if score == 13:
 		door._open()
-		timer.stop()
-		time /= 100
-		
 	navigation.bake_navigation_polygon()
 	if SPEED == 200.0:
 		aura.visible =false
@@ -80,6 +77,41 @@ func _on_pickup_area_entered(area: Area2D):
 			pass
 	elif area.has_method('_open'):
 		if not area.is_in_group("ignored"):
+			timer.stop()
+			print(level_file)
+			print(time)
+			if level_file == 'res://scenes/node.tscn':
+				if time < GlobalInfo.time1:
+					GlobalInfo.time1 = time
+					GlobalInfo.level1_done = true
+			elif level_file == 'res://scenes/level_2.tscn':
+				if time < GlobalInfo.time2:
+					GlobalInfo.time2 = time
+					GlobalInfo.level2_done = true
+			elif level_file == 'res://scenes/level_3.tscn':
+				if time < GlobalInfo.time3:
+					GlobalInfo.time3 = time
+					GlobalInfo.level3_done = true
+			elif level_file == 'res://scenes/level_4.tscn':
+				if time < GlobalInfo.time4:
+					GlobalInfo.time4 = time
+					GlobalInfo.level4_done = true
+			elif level_file == 'res://scenes/level_5.tscn':
+				if time < GlobalInfo.time5:
+					GlobalInfo.time5 = time
+					GlobalInfo.level5_done = true
+			elif level_file == 'res://scenes/level_6.tscn':
+				if time < GlobalInfo.time6:
+					GlobalInfo.time6 = time
+					GlobalInfo.level6_done = true
+			elif level_file == 'res://scenes/level_7.tscn':
+				if time < GlobalInfo.time7:
+					GlobalInfo.time7 = time
+					GlobalInfo.level7_done = true
+			elif level_file == 'res://scenes/level_8.tscn':
+				if time < GlobalInfo.time8:
+					GlobalInfo.time8 = time
+					GlobalInfo.level9_done = true
 			get_tree().change_scene_to_file('res://scenes/molodec.tscn')
 	elif area.has_method('_honey'):
 		in_honey = true
@@ -142,6 +174,5 @@ func _on_pickup_area_body_entered(body: Node2D) -> void:
 		else:
 			on_death()# Replace with function body.
 
-
 func _on_timer_timeout() -> void:
-	time += 1 # Replace with function body.
+	time += 0.01 # Replace with function body.

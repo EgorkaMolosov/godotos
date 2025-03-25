@@ -12,6 +12,23 @@ var hand = load('res://ui/Cursors_v2/Light/Hands/Hand1.png')
 func _ready() -> void:
 	parallax.set_scroll_offset(GlobalInfo.parallax) # Replace with function body.
 	var new_pos_leave = leave.position.x
+	if GlobalInfo.level1_done == true:
+		$gui/Button_first/Label.text = "%10.2f" % GlobalInfo.time1
+	if GlobalInfo.level2_done == true:
+		$gui/Button_second/Label.text = "%10.2f" % GlobalInfo.time2
+	if GlobalInfo.level3_done == true:
+		$gui/Button_third/Label.text = "%10.2f" % GlobalInfo.time3
+	if GlobalInfo.level4_done == true:
+		$gui/Button_fourth/Label.text = "%10.2f" % GlobalInfo.time4
+	if GlobalInfo.level5_done == true:
+		$gui/Button_fifth/Label.text = "%10.2f" % GlobalInfo.time5
+	if GlobalInfo.level6_done == true:
+		$gui/Button_sixth/Label.text = "%10.2f" % GlobalInfo.time6
+	if GlobalInfo.level7_done == true:
+		$gui/Button_seventh/Label.text = "%10.2f" % GlobalInfo.time7
+	if GlobalInfo.level8_done == true:
+		$gui/Button_eight/Label.text = "%10.2f" % GlobalInfo.time8
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	gui.position = gui.position.lerp(Vector2(new_pos, gui.position.y), delta * 10)

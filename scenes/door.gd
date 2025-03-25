@@ -27,7 +27,6 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	if not self.is_in_group("ignored"):
 		if mass == false:
 			mass = true# Replace with function body.
-			print(mass)
 		if mass == true:
 			Animated_sprite.play('opened')
 	
