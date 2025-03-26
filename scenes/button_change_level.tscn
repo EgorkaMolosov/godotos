@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cby58cwtglwdq"]
+[gd_scene load_steps=3 format=3 uid="uid://cby58cwtglwdq"]
 
 [ext_resource type="FontFile" uid="uid://cpbwjmlx4yvbb" path="res://fonts/Bloq.ttf" id="1_j06xa"]
+[ext_resource type="Texture2D" uid="uid://ucl7lmmytv2l" path="res://ui/tick2.png" id="2_jm54b"]
 
 [node name="Button_first" type="Button"]
 offset_left = 296.0
@@ -12,6 +13,10 @@ theme_override_font_sizes/font_size = 40
 text = "LEVEL 1"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(248, 32)
+scale = Vector2(2.875, 2.875)
+texture = ExtResource("2_jm54b")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
