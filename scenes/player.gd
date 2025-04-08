@@ -114,7 +114,8 @@ func _on_pickup_area_entered(area: Area2D):
 				if time < GlobalInfo.time8:
 					GlobalInfo.time8 = time
 					GlobalInfo.level9_done = true
-			Bridge.advertisement.show_interstitial()
+			get_tree().change_scene_to_file('res://scenes/molodec.tscn')
+			#Bridge.advertisement.show_interstitial()
 	elif area.has_method('_honey'):
 		in_honey = true
 		area._honey()
@@ -179,6 +180,6 @@ func _on_pickup_area_body_entered(body: Node2D) -> void:
 func _on_timer_timeout() -> void:
 	time += 0.01 # Replace with function body.
 
-func _on_interstitial_state_changed(state):
-	if state == 'closed':
-		get_tree().change_scene_to_file('res://scenes/molodec.tscn')
+#func _on_interstitial_state_changed(state):
+#	if state == 'closed':
+#		get_tree().change_scene_to_file('res://scenes/molodec.tscn')

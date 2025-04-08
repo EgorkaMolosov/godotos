@@ -39,7 +39,6 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/mode=3
 window/stretch/mode="canvas_items"
-window/stretch/aspect="keep_height"
 mouse_cursor/custom_image="res://ui/Cursors_v2/Light/Arrows/Arrow1.png"
 
 [editor]
