@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var SPEED = 99
 @onready var animated_bich = $AnimatedSprite2D
+@onready var player2 = get_parent().get_parent().get_node("player2")
 @onready var player = get_parent().get_parent().get_node("player")
 @onready var navigation_agent = $NavigationAgent2D
 
@@ -14,7 +15,10 @@ func _process(delta: float) -> void:
 	pass
 	
 func _physics_process(delta):
-	navigation_agent.target_position = Vector2(player.global_position.x,player.global_position.y-10)
+	if ((player.position.x - self.position.x)**2 + (player.position.y - self.position.y)**2)**0.5 < ((player2.position.x - self.position.x)**2 + (player2.position.y - self.position.y)**2)**0.5:
+		navigation_agent.target_position = Vector2(player.global_position.x,player.global_position.y-10)
+	else:
+		navigation_agent.target_position = Vector2(player2.global_position.x,player2.global_position.y-10)
 	velocity = global_position.direction_to(navigation_agent.get_next_path_position()) * SPEED
 	move_and_slide()
 	handle_movement_animation()
@@ -23,7 +27,7 @@ func _shit_process(delta: float) -> void:
 	pass
 
 func toggle_flip_sprite():
-	if global_position > player.global_position:
+	if global_position > navigation_agent.target_position:
 		animated_bich.play("default")
 		animated_bich.flip_h = true
 	else:
