@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cd4ycjq1pdvoj"]
+[gd_scene load_steps=11 format=3 uid="uid://cd4ycjq1pdvoj"]
 
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="1_lf45r"]
 [ext_resource type="PackedScene" uid="uid://cl6xvn3n8fv36" path="res://scenes/tile_map.tscn" id="2_0xt7a"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bd6w0p5iloq7b" path="res://scenes/door.tscn" id="6_wbv5x"]
 [ext_resource type="PackedScene" uid="uid://cp0iu1sqxyqkt" path="res://scenes/enemy.tscn" id="7_riq30"]
 [ext_resource type="PackedScene" uid="uid://b1eb7x7eqi65f" path="res://scenes/gui_in_game.tscn" id="8_ukwcr"]
+[ext_resource type="PackedScene" uid="uid://b5r3p30fd2h61" path="res://scenes/player2.tscn" id="9_udkxx"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8ni0r"]
 vertices = PackedVector2Array(408.656, -70.1328, 346.039, -139.008, 552.68, -201.633)
@@ -118,3 +119,6 @@ position = Vector2(1156, 366)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_8ni0r")
+
+[node name="player2" parent="." instance=ExtResource("9_udkxx")]
+position = Vector2(336, 360)

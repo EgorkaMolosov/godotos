@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cpar65rhq588n"]
+[gd_scene load_steps=13 format=3 uid="uid://cpar65rhq588n"]
 
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="1_l56cy"]
 [ext_resource type="PackedScene" uid="uid://cl6xvn3n8fv36" path="res://scenes/tile_map.tscn" id="2_ro0io"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b1eb7x7eqi65f" path="res://scenes/gui_in_game.tscn" id="8_pd23o"]
 [ext_resource type="PackedScene" uid="uid://c6qjwb7tev40b" path="res://scenes/flying_block.tscn" id="9_p3q6q"]
 [ext_resource type="PackedScene" uid="uid://sg7h73e5onaa" path="res://scenes/flying_block_apto.tscn" id="10_v37yj"]
+[ext_resource type="PackedScene" uid="uid://b5r3p30fd2h61" path="res://scenes/player2.tscn" id="11_2mypq"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_kcpcd"]
 vertices = PackedVector2Array(869.75, -183.813, 421.102, -171.844, 624.492, -237.648)
@@ -134,3 +135,6 @@ position = Vector2(352, 504)
 [node name="spikes" parent="." instance=ExtResource("3_7avch")]
 position = Vector2(368, 16)
 rotation = 3.14159
+
+[node name="player2" parent="." instance=ExtResource("11_2mypq")]
+position = Vector2(219, 593)

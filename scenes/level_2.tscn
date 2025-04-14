@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqgrltkmiymen"]
+[gd_scene load_steps=12 format=3 uid="uid://cqgrltkmiymen"]
 
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="1_5nejo"]
 [ext_resource type="NavigationPolygon" uid="uid://bttl456eat3cd" path="res://scenes/node.tres" id="2_0nlu3"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b1eb7x7eqi65f" path="res://scenes/gui_in_game.tscn" id="7_h5gvq"]
 [ext_resource type="PackedScene" uid="uid://bbgjdcdok07cq" path="res://scenes/bats.tscn" id="8_fj8yh"]
 [ext_resource type="PackedScene" uid="uid://bd6w0p5iloq7b" path="res://scenes/door.tscn" id="9_4cyuu"]
+[ext_resource type="PackedScene" uid="uid://b5r3p30fd2h61" path="res://scenes/player2.tscn" id="11_u1oqf"]
 
 [node name="level2" type="Node2D"]
 
@@ -37,7 +38,7 @@ position = Vector2(1120, 248)
 position = Vector2(640, 656)
 
 [node name="player" parent="." instance=ExtResource("3_qrio7")]
-position = Vector2(592, 232)
+position = Vector2(936, 112)
 
 [node name="Item" parent="." instance=ExtResource("4_0v83d")]
 position = Vector2(1197, 634)
@@ -126,3 +127,6 @@ position = Vector2(1237, 274)
 
 [node name="door" parent="." instance=ExtResource("9_4cyuu")]
 position = Vector2(928, 704)
+
+[node name="player2" parent="." instance=ExtResource("11_u1oqf")]
+position = Vector2(472, 136)

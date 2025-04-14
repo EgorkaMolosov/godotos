@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://78m3o83yxcfm"]
+[gd_scene load_steps=13 format=3 uid="uid://78m3o83yxcfm"]
 
 [ext_resource type="NavigationPolygon" uid="uid://bttl456eat3cd" path="res://scenes/node.tres" id="1_hssg7"]
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="1_m5rfb"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bd6w0p5iloq7b" path="res://scenes/door.tscn" id="8_4uj5x"]
 [ext_resource type="PackedScene" uid="uid://bbgjdcdok07cq" path="res://scenes/bats.tscn" id="9_4g534"]
 [ext_resource type="PackedScene" uid="uid://b1eb7x7eqi65f" path="res://scenes/gui_in_game.tscn" id="10_s5bsm"]
+[ext_resource type="PackedScene" uid="uid://b5r3p30fd2h61" path="res://scenes/player2.tscn" id="12_66q0l"]
 
 [node name="level_7" type="Node2D"]
 
@@ -119,5 +120,8 @@ position = Vector2(309, 450)
 
 [node name="Item8" parent="." instance=ExtResource("7_fl3n0")]
 position = Vector2(48, 40)
+
+[node name="player2" parent="." instance=ExtResource("12_66q0l")]
+position = Vector2(915, 137)
 
 [editable path="NavigationRegion2D/ParallaxBackground3"]
