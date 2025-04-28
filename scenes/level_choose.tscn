@@ -27,6 +27,20 @@ theme_override_font_sizes/font_size = 29
 text = "	LEAVE THE GAME"
 metadata/_edit_use_anchors_ = true
 
+[node name="Button_Leave2" type="Button" parent="gui"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.06504
+anchor_right = 1.06504
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 225.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("3_jkyhn")
+theme_override_font_sizes/font_size = 29
+text = "BACK"
+metadata/_edit_use_anchors_ = true
+
 [node name="Button_arrow_left" parent="gui" instance=ExtResource("4_t6adh")]
 layout_mode = 0
 offset_left = 1176.0
@@ -111,6 +125,9 @@ text = "LEVEL 8"
 [connection signal="mouse_entered" from="gui/Button_Leave" to="." method="_on_button_leave_mouse_entered"]
 [connection signal="mouse_exited" from="gui/Button_Leave" to="." method="_on_button_leave_mouse_exited"]
 [connection signal="pressed" from="gui/Button_Leave" to="." method="_on_button_leave_pressed"]
+[connection signal="mouse_entered" from="gui/Button_Leave2" to="." method="_on_button_leave_mouse_entered"]
+[connection signal="mouse_exited" from="gui/Button_Leave2" to="." method="_on_button_leave_mouse_exited"]
+[connection signal="pressed" from="gui/Button_Leave2" to="." method="_to_menu"]
 [connection signal="mouse_entered" from="gui/Button_arrow_left" to="." method="_on_button_arrow_left_mouse_entered"]
 [connection signal="mouse_exited" from="gui/Button_arrow_left" to="." method="_on_button_arrow_left_mouse_exited"]
 [connection signal="pressed" from="gui/Button_arrow_left" to="." method="_on_button_arrow_left__pressed"]

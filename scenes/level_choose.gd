@@ -2,9 +2,11 @@ extends Node2D
 @onready var gui = $gui
 @onready var parallax = $ParallaxBackground
 @onready var leave = $gui/Button_Leave
+@onready var menu = $gui/Button_Leave2
 var scroll_offset := Vector2.ZERO
 var new_pos = 0
 var new_pos_leave = 8
+var new_pos_menu = 1056
 var cursor = load('res://ui/Cursors_v2/Light/Arrows/Arrow1.png')
 var hand = load('res://ui/Cursors_v2/Light/Hands/Hand1.png')
 
@@ -12,6 +14,7 @@ var hand = load('res://ui/Cursors_v2/Light/Hands/Hand1.png')
 func _ready() -> void:
 	parallax.set_scroll_offset(GlobalInfo.parallax) # Replace with function body.
 	var new_pos_leave = leave.position.x
+	var new_pos_menu = menu.position.x
 	if GlobalInfo.level1_done == true:
 		$gui/Button_first/Sprite2D.visible = true
 		$gui/Button_first/Label.text = "%3.2f" % GlobalInfo.time1
@@ -41,6 +44,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	gui.position = gui.position.lerp(Vector2(new_pos, gui.position.y), delta * 10)
 	leave.position = leave.position.lerp(Vector2(new_pos_leave, leave.position.y), delta * 10)
+	menu.position = menu.position.lerp(Vector2(new_pos_menu,menu.position.y), delta*10)
 
 func _on_button_leave_pressed() -> void:
 	get_tree().quit()
@@ -63,9 +67,11 @@ func _on_button_arrow_left_mouse_exited() -> void:
 func _on_button_arrow_left__pressed() -> void:
 	new_pos = gui.position.x - 1280
 	new_pos_leave = leave.position.x + 1280
+	new_pos_menu = menu.position.x + 1280
 func _on_button_right_pressed() -> void:
 	new_pos = gui.position.x + 1280
 	new_pos_leave = leave.position.x - 1280
+	new_pos_menu = menu.position.x - 1280
 
 
 func _on_button_change_level_mouse_entered() -> void:
@@ -113,3 +119,8 @@ func _on_button_eight_pressed() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()
 	get_tree().change_scene_to_file("res://scenes/level_8.tscn")
 	GlobalInfo.started = false # Replace with function body.
+
+
+func _to_menu() -> void:
+	GlobalInfo.parallax = parallax.get_scroll_offset()
+	get_tree().change_scene_to_file("res://scenes/menu.tscn") # Replace with function body.

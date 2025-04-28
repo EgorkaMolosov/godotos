@@ -19,6 +19,8 @@ var level5_done = false
 var level6_done = false
 var level7_done = false
 var level8_done = false
+var multiplay = false
+var score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

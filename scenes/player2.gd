@@ -10,7 +10,6 @@ extends CharacterBody2D
 var SPEED = 300.0
 var JUMP_VELOCITY = -300.0
 var gravity = 980
-var score = 0
 var time = 0.00
 @onready var count = get_parent().get_node('GUI_IN_GAME/Label')
 @onready var door = get_parent().get_node('door')
@@ -23,6 +22,9 @@ var in_honey = false
 var level_ended = false
 
 func _ready() -> void:
+	GlobalInfo.score = 0
+	if not GlobalInfo.multiplay:
+		queue_free()
 	level_file = get_parent().scene_file_path
 	parallax.set_scroll_offset(GlobalInfo.parallax)
 	Bridge.advertisement.connect("interstitial_state_changed", Callable(self, "_on_interstitial_state_changed"))
@@ -31,7 +33,7 @@ func _process(delta: float) -> void:
 	if GlobalInfo.started == false:
 		gui._on_retry_pressed()
 		GlobalInfo.started = true
-	if score == 13:
+	if GlobalInfo.score == 13:
 		door._open()
 	navigation.bake_navigation_polygon()
 	if SPEED == 200.0:
@@ -72,8 +74,8 @@ func _on_pickup_area_entered(area: Area2D):
 	if area.has_method("on_pickup"):
 		if not area.is_in_group("ignored"):
 			area.on_pickup(self)
-			score += 1
-			count.set_text('score: '+str(score))
+			GlobalInfo.score += 1
+			count.set_text('score: '+str(GlobalInfo.score))
 			area.add_to_group("ignored")
 		else:
 			pass

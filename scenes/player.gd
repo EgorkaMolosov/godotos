@@ -10,7 +10,6 @@ extends CharacterBody2D
 var SPEED = 300.0
 var JUMP_VELOCITY = -300.0
 var gravity = 980
-var score = 0
 var time = 0.00
 @onready var count = get_parent().get_node('GUI_IN_GAME/Label')
 @onready var door = get_parent().get_node('door')
@@ -26,12 +25,13 @@ func _ready() -> void:
 	level_file = get_parent().scene_file_path
 	parallax.set_scroll_offset(GlobalInfo.parallax)
 	Bridge.advertisement.connect("interstitial_state_changed", Callable(self, "_on_interstitial_state_changed"))
+	GlobalInfo.score = 0
 
 func _process(delta: float) -> void:
 	if GlobalInfo.started == false:
 		gui._on_retry_pressed()
 		GlobalInfo.started = true
-	if score == 13:
+	if GlobalInfo.score == 13:
 		door._open()
 	navigation.bake_navigation_polygon()
 	if SPEED == 200.0:
@@ -72,8 +72,8 @@ func _on_pickup_area_entered(area: Area2D):
 	if area.has_method("on_pickup"):
 		if not area.is_in_group("ignored"):
 			area.on_pickup(self)
-			score += 1
-			count.set_text('score: '+str(score))
+			GlobalInfo.score += 1
+			count.set_text('score: '+str(GlobalInfo.score))
 			area.add_to_group("ignored")
 		else:
 			pass
@@ -162,13 +162,11 @@ func _animation_death_finished() -> void:
 	GlobalInfo.parallax = parallax.get_scroll_offset()
 	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
-
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	if position.y > 720:
 		on_death()
 	else:
 		pass # Replace with function body.
-
 
 func _on_pickup_area_body_entered(body: Node2D) -> void:
 	if body.has_method("_shit_process"):
@@ -179,7 +177,3 @@ func _on_pickup_area_body_entered(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	time += 0.01 # Replace with function body.
-
-#func _on_interstitial_state_changed(state):
-#	if state == 'closed':
-#		get_tree().change_scene_to_file('res://scenes/molodec.tscn')
