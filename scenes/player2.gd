@@ -27,6 +27,7 @@ func _ready() -> void:
 		queue_free()
 	level_file = get_parent().scene_file_path
 	parallax.set_scroll_offset(GlobalInfo.parallax)
+	Bridge.advertisement.connect("interstitial_state_changed", Callable(self, "_on_interstitial_state_changed"))
 
 func _process(delta: float) -> void:
 	if GlobalInfo.started == false:
@@ -114,7 +115,7 @@ func _on_pickup_area_entered(area: Area2D):
 			elif level_file == 'res://scenes/level_8.tscn':
 				if time < GlobalInfo.time8:
 					GlobalInfo.time8 = time
-					GlobalInfo.level8_done = true
+					GlobalInfo.level9_done = true
 			get_tree().change_scene_to_file('res://scenes/molodec.tscn')
 			#Bridge.advertisement.show_interstitial()
 	elif area.has_method('_honey'):

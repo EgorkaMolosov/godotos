@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dhv4wv8nywcrj"]
 
-[ext_resource type="Script" uid="uid://bwe38bxpvhwv8" path="res://scenes/game_over.gd" id="1_2s4gu"]
+[ext_resource type="Script" path="res://scenes/game_over.gd" id="1_2s4gu"]
 [ext_resource type="FontFile" uid="uid://cpbwjmlx4yvbb" path="res://fonts/Bloq.ttf" id="2_c74dc"]
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="2_ski4m"]
 

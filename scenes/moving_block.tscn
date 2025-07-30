@@ -41,8 +41,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eomdd"]
 _data = {
-&"RESET": SubResource("Animation_ta734"),
-&"move": SubResource("Animation_m5eah")
+"RESET": SubResource("Animation_ta734"),
+"move": SubResource("Animation_m5eah")
 }
 
 [node name="StaticBody2D" type="AnimatableBody2D"]

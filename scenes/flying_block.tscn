@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6qjwb7tev40b"]
 
-[ext_resource type="Script" uid="uid://c42hs02ik35y7" path="res://scenes/flying_block.gd" id="1_8bb3m"]
+[ext_resource type="Script" path="res://scenes/flying_block.gd" id="1_8bb3m"]
 [ext_resource type="Texture2D" uid="uid://bvux02vx8bex4" path="res://Sprites/flying_block.png" id="1_tt6ow"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dk25"]

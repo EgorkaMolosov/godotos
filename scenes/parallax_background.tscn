@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://j1v8kmx5aqgb"]
 
-[ext_resource type="Script" uid="uid://c7g24k61igq8d" path="res://scenes/parallax_background.gd" id="1_vvpxa"]
+[ext_resource type="Script" path="res://scenes/parallax_background.gd" id="1_vvpxa"]
 [ext_resource type="Texture2D" uid="uid://bk0emjb32w1du" path="res://background/BG Image.png" id="2_f01qt"]
 [ext_resource type="Texture2D" uid="uid://bdfayrr7y7hja" path="res://background/Big Clouds.png" id="3_rwvjp"]
 [ext_resource type="Texture2D" uid="uid://vvmvvuuqpyik" path="res://background/Small Cloud 2.png" id="4_ixd0r"]
