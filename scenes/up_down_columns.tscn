@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://crre8hjlj11c8"]
 
 [ext_resource type="Texture2D" uid="uid://b2iey2vu4wqc7" path="res://Sprites/column.png" id="1_isgut"]
-[ext_resource type="Script" path="res://scenes/up_down_columns.gd" id="1_wuowy"]
+[ext_resource type="Script" uid="uid://6gf4k4s0as0u" path="res://scenes/up_down_columns.gd" id="1_wuowy"]
 [ext_resource type="PackedScene" uid="uid://cp0iu1sqxyqkt" path="res://scenes/enemy.tscn" id="2_2g6d0"]
 [ext_resource type="PackedScene" uid="uid://et84lyikqsxa" path="res://scenes/honey.tscn" id="4_xixj5"]
 

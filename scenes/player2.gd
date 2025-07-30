@@ -27,7 +27,6 @@ func _ready() -> void:
 		queue_free()
 	level_file = get_parent().scene_file_path
 	parallax.set_scroll_offset(GlobalInfo.parallax)
-	Bridge.advertisement.connect("interstitial_state_changed", Callable(self, "_on_interstitial_state_changed"))
 
 func _process(delta: float) -> void:
 	if GlobalInfo.started == false:
@@ -44,15 +43,13 @@ func _process(delta: float) -> void:
 		self.position = self.position.lerp(GlobalInfo.honey.global_position,delta*10)
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	# Handle jump.
+
 	if Input.is_action_just_pressed("ui_home") and is_on_floor():
 		jump_sound.play()
 		velocity.y = JUMP_VELOCITY
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+
 	var direction := Input.get_axis("ui_page_up", "ui_page_down")
 	if direction:
 		velocity.x = direction * SPEED
@@ -115,7 +112,7 @@ func _on_pickup_area_entered(area: Area2D):
 			elif level_file == 'res://scenes/level_8.tscn':
 				if time < GlobalInfo.time8:
 					GlobalInfo.time8 = time
-					GlobalInfo.level9_done = true
+					GlobalInfo.level8_done = true
 			get_tree().change_scene_to_file('res://scenes/molodec.tscn')
 			#Bridge.advertisement.show_interstitial()
 	elif area.has_method('_honey'):
@@ -177,9 +174,10 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 func _on_pickup_area_body_entered(body: Node2D) -> void:
 	if body.has_method("_shit_process"):
 		if position.y - body.position.y < -3:
-			body.queue_free()
+			body.die()
 		else:
-			on_death()# Replace with function body.
+			if not body.dead:
+				on_death()# Replace with function body.
 
 func _on_timer_timeout() -> void:
 	time += 0.01 # Replace with function body.

@@ -1,9 +1,9 @@
 [gd_scene load_steps=31 format=3 uid="uid://bkehst4np6jr0"]
 
-[ext_resource type="Script" path="res://scenes/item.gd" id="1_xusnl"]
+[ext_resource type="Script" uid="uid://byeyen66gixj3" path="res://scenes/item.gd" id="1_xusnl"]
 [ext_resource type="Texture2D" uid="uid://cvaip870tjd17" path="res://animations/Apple.png" id="2_mves1"]
 [ext_resource type="Texture2D" uid="uid://bacwxg7ixqiqr" path="res://animations/Appearing (96x96).png" id="3_230af"]
-[ext_resource type="AudioStream" uid="uid://t1hkjdkuhrgt" path="res://sound/Shoot.mp3" id="4_cexo0"]
+[ext_resource type="AudioStream" uid="uid://cjni2njg2ofre" path="res://sound/Shoot (mp3cut.net).mp3" id="4_vljjh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_guye2"]
 radius = 20.2237
@@ -206,8 +206,8 @@ frame = 6
 frame_progress = 1.0
 
 [node name="collect_sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_cexo0")
-volume_db = -15.988
+stream = ExtResource("4_vljjh")
+volume_db = -72.878
 pitch_scale = 1.19
 mix_target = 2
 

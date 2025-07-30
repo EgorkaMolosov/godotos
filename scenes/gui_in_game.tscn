@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1eb7x7eqi65f"]
 
-[ext_resource type="Script" path="res://scenes/gui_in_game.gd" id="1_h5v75"]
+[ext_resource type="Script" uid="uid://0t78kkiea7wo" path="res://scenes/gui_in_game.gd" id="1_h5v75"]
 [ext_resource type="FontFile" uid="uid://cpbwjmlx4yvbb" path="res://fonts/Bloq.ttf" id="2_neggv"]
 
 [node name="GUI_IN_GAME" type="CanvasLayer"]

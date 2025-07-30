@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dpqp8nx6swbsv"]
 
-[ext_resource type="Script" path="res://scenes/menu.gd" id="1_0u8jq"]
+[ext_resource type="Script" uid="uid://48v024rj6re" path="res://scenes/menu.gd" id="1_0u8jq"]
 [ext_resource type="PackedScene" uid="uid://j1v8kmx5aqgb" path="res://scenes/parallax_background.tscn" id="2_vfncc"]
 [ext_resource type="FontFile" uid="uid://cpbwjmlx4yvbb" path="res://fonts/Bloq.ttf" id="3_n5rmg"]
 
